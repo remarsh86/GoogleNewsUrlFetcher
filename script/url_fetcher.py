@@ -9,6 +9,7 @@ from newsapi import NewsApiClient
 
 
 def get_app_root():
+    """Get path of project root"""
     path_of_script = os.path.dirname(os.path.realpath(__file__))
     return os.path.abspath(os.path.join(path_of_script, '..'))
 
@@ -20,7 +21,7 @@ def get_urls(topics_string):
     :return None"""
 
     news_api = NewsApiClient(api_key='a68f4ec372ce4a6bae16c4bb7cd832fe')
-    topics_file_path = os.path.join(get_app_root(), "topics", topics_string)
+    topics_file_path = os.path.join(get_app_root(), 'topics', topics_string)
 
     with open(topics_file_path, 'r') as topics_file:
         for topic in topics_file:
@@ -30,14 +31,14 @@ def get_urls(topics_string):
             capitalized_topic = topic.title()
 
             # Create a new file to save result set
-            urls_file_path = os.path.join(get_app_root(), "urls", topics_string.split(".")[0],
-                                          (capitalized_topic + ".txt").replace(" ", ""))
+            urls_file_path = os.path.join(get_app_root(), 'urls', topics_string.split('.')[0],
+                                          (capitalized_topic + '.txt').replace(' ', ''))
             # Write result set of urls to new file
             with open(urls_file_path, 'w') as urls_file:
                 all_articles = news_api.get_everything(q=topic, sort_by='relevancy', page_size=100)
                 for article in all_articles['articles']:
                     urls_file.write(article['url'])
-                    urls_file.write("\n")
+                    urls_file.write('\n')
 
 
 if __name__ == '__main__':

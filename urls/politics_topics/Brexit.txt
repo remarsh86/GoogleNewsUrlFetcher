@@ -41,8 +41,8 @@ https://www.bbc.co.uk/news/in-pictures-50808606
 https://gizmodo.com/in-a-dangerous-and-sinister-step-london-police-start-u-1841201259
 https://www.spiegel.de/plus/nach-brexit-so-starten-wir-europa-neu-kommentar-a-00000000-0002-0001-0000-000167198086
 https://www.spiegel.de/wirtschaft/populistische-regierungen-puls-hoch-und-wirtschaft-wackelt-a-35d2ac36-e55f-40ab-b8e9-dcc5b39b796c
-https://news.yahoo.com/uk-pms-spokesman-passing-brexit-114903609.html
 https://news.yahoo.com/britains-silenced-big-ben-must-111504492.html
+https://news.yahoo.com/uk-pms-spokesman-passing-brexit-114903609.html
 https://www.spiegel.de/politik/ausland/brexit-ursula-von-der-leyen-erwartet-harte-verhandlungen-mit-grossbritannien-a-92eda4cf-c4ef-4555-9188-a4fac387ebed
 https://www.businessinsider.com/investing-tips-iran-conflict-news-trump-impeachment-2020-themes-jpmorgan-2020-1
 https://ca.finance.yahoo.com/news/china-temporarily-suspends-shanghai-london-062654667.html
@@ -53,8 +53,8 @@ https://ritholtz.com/2020/01/bbrg-brexit-facebook-endowments-and-other-errors/
 https://www.newscientist.com/article/2230110-exclusive-uk-considering-ambitious-new-climate-plan-soon-after-brexit/
 https://www.zeit.de/politik/ausland/2020-01/brexit-gesetz-grossbritannien-britisches-parlament-abstimmung
 https://www.nature.com/articles/d41586-020-00185-3?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+nature%2Frss%2Fcurrent+%28Nature+-+Issue%29
-https://lenta.ru/news/2020/01/24/podpisal/
 https://lenta.ru/news/2020/01/22/brexit/
+https://lenta.ru/news/2020/01/24/podpisal/
 https://time.com/5763338/northern-ireland-government/
 https://boingboing.net/2020/01/12/gin-yogurt-criticized.html
 https://www.faz.net/aktuell/karriere-hochschule/hoersaal/was-der-brexit-fuer-eu-studenten-bedeutet-16597679.html
@@ -72,9 +72,9 @@ https://www.zeit.de/politik/ausland/2020-01/brexit-grossbritannien-oberhaus-absi
 https://www.zeit.de/politik/ausland/2020-01/brexit-gesetz-grossbritannien-ursula-von-der-leyen-charles-michel
 https://www.zeit.de/politik/ausland/2020-01/irland-leo-varadkar-premierminister-neuwahlen
 https://www.zeit.de/2020/04/eu-austritt-brexit-anhaenger-remain-grossbritannien
-https://www.zeit.de/politik/ausland/2020-01/boris-johnson-neujahrsansprache-brexit-grossbritannien-europaeische-union
 https://www.zeit.de/politik/ausland/2020-01/brexit-freizuegigkeit-eu-buerger-europaparlament
 https://www.zeit.de/video/2020-01/6120741147001/brexit-ursula-von-der-leyen-trifft-boris-johnson
+https://www.zeit.de/politik/ausland/2020-01/boris-johnson-neujahrsansprache-brexit-grossbritannien-europaeische-union
 https://www.aljazeera.com/indepth/opinion/de-europeanising-brexit-britain-200127102842869.html
 https://elpais.com/internacional/2019/12/31/actualidad/1577814346_060150.html
 https://www.cnet.com/news/facebook-promises-1000-new-jobs-in-london-as-brexit-looms/
@@ -84,8 +84,8 @@ https://www.engadget.com/2020/01/26/uk-will-not-implement-eu-copyright-directive
 https://www.tagesschau.de/ausland/brexit-unterhaus-149.html
 https://www.tagesschau.de/ausland/oberhaus-brexitgesetz-101.html
 https://www.bloomberg.com/news/articles/2020-01-09/brexit-bulletin-barnier-s-back-alright
-https://www.bloomberg.com/news/articles/2020-01-13/brexit-bulletin-will-bank-of-england-cut-rates-before-brexit
 https://www.bloomberg.com/news/articles/2020-01-22/brexit-bulletin-the-next-chapter
+https://www.bloomberg.com/news/articles/2020-01-13/brexit-bulletin-will-bank-of-england-cut-rates-before-brexit
 https://www.bloomberg.com/news/videos/2019-12-31/2020-what-s-next-for-brexit-video
 https://www.bloomberg.com/news/articles/2020-01-17/brexit-bulletin-pound-under-pressure
 https://www.bloomberg.com/news/articles/2020-01-14/brexit-bulletin-johnson-s-big-ben-bong-plan-falls-flat

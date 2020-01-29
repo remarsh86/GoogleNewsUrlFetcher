@@ -12,8 +12,8 @@ https://thenextweb.com/hardfork/2020/01/10/satoshi-nakaboto-bitcoin-upgrade-make
 https://thenextweb.com/hardfork/2020/01/20/satoshi-nakaboto-crypto-twitter-explodes-over-sceptic-peter-schiff-losing-all-his-bitcoin/
 https://thenextweb.com/hardfork/2020/01/14/satoshi-nakaboto-bitcoin-options-start-trading-on-chicagos-cme-exchange/
 https://thenextweb.com/hardfork/2020/01/17/satoshi-nakaboto-bitcoin-is-now-worth-as-much-as-mcdonalds/
-https://thenextweb.com/hardfork/2020/01/23/satoshi-nakaboto-bitcoin-markets-cool-amid-coronavirus-uncertainty/
 https://thenextweb.com/hardfork/2020/01/24/satoshi-nakaboto-elon-musk-says-bitcoin-is-good-for-illegal-payments-and-thats-about-it/
+https://thenextweb.com/hardfork/2020/01/23/satoshi-nakaboto-bitcoin-markets-cool-amid-coronavirus-uncertainty/
 https://thenextweb.com/hardfork/2020/01/28/satoshi-nakaboto-bitcoin-edges-up-as-global-markets-take-coronavirus-beating/
 https://www.npr.org/2020/01/13/795988512/china-to-test-digital-currency-could-it-end-up-challenging-the-dollar-globally
 https://thenextweb.com/hardfork/2020/01/16/bitcoin-cryptocurrency-money-launder-chainalysis-blockchain-huobi-binance/
@@ -50,9 +50,9 @@ https://readwrite.com/2020/01/10/multichain-vs-ethereum-the-ulitmate-face-off/
 https://www.businessinsider.com/airbnb-acquisitions-tilt-crashpadder-nabewise-2020-1
 https://modernconsensus.com/cryptocurrencies/bitcoin/craig-wright-to-judge-bonded-courier-gave-me-keys-to-satoshi-nakamotos-1100111-bitcoins/
 https://www.marketwatch.com/story/bitcoin-prices-are-kicking-off-2020-just-like-they-ended-2019-outperforming-the-stock-market-2020-01-14
-https://thenextweb.com/hardfork/2020/01/16/uzbekistan-national-cryptocurrency-mining-pool/
-https://thenextweb.com/hardfork/2020/01/24/btc-e-cryptocurrency-exchange-vinnik-extradition-france/
 https://thenextweb.com/hardfork/2020/01/23/cardano-q4-2019-all-dead-cat-and-no-bounce/
+https://thenextweb.com/hardfork/2020/01/24/btc-e-cryptocurrency-exchange-vinnik-extradition-france/
+https://thenextweb.com/hardfork/2020/01/16/uzbekistan-national-cryptocurrency-mining-pool/
 http://techcrunch.com/2020/01/23/dfinity-launches-an-open-source-platform-aimed-at-the-social-networking-giants/
 https://thenextweb.com/hardfork/2020/01/17/cabbagetech-ceo-33-months-prison-cryptocurrency-scam/
 https://thenextweb.com/hardfork/2020/01/06/bitmains-former-co-ceo-against-proposed-layoffs-micree-zhan/
@@ -77,8 +77,8 @@ https://www.faz.net/aktuell/finanzen/meine-finanzen/vorsorgen-fuer-das-alter/die
 https://www.gwern.net/Self-decrypting-files
 https://t3n.de/news/bitcoin-durchbricht-8000-dollar-1239989/
 https://t3n.de/news/8000-dollar-mehr-iran-krise-1239989/
-https://t3n.de/news/halving-iran-krise-mehr-experte-1242390/
 https://t3n.de/news/bitcoin-bestem-start-ins-jahr-1242390/
+https://t3n.de/news/halving-iran-krise-mehr-experte-1242390/
 https://qz.com/1779226/what-the-booming-stock-market-means-for-bitcoin/
 https://t3n.de/news/haendler-zurueck-weihnachtspause-1239989/
 https://t3n.de/news/bitwala-kryptowaehrung-ether-ethereum-1238928/

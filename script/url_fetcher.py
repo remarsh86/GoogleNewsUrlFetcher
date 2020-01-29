@@ -9,16 +9,29 @@ from newsapi import NewsApiClient
 
 
 def get_app_root():
-    """Get path of project root"""
+    """
+    Get path of project root
+    :return:
+    """
     path_of_script = os.path.dirname(os.path.realpath(__file__))
     return os.path.abspath(os.path.join(path_of_script, '..'))
+
+
+def format_file_name(topic):
+    """
+    :param topic: individual topic from category
+    :return: a file name string in camel case formatting without apostrophes or dashes, with 'txt' file ending
+    """
+    capitalized_topic = topic.replace('\'', '').title()
+    return (capitalized_topic + '.txt').replace(' ', '').replace('-', '')
 
 
 def get_urls(topics_string):
     """Open file with list of topics. Read each topic and call google news api to request articles ranked relevant to
     this topic.  Write the result set of urls to a new file (one file per topic). With 20 topics and 2 categories, 40
     files will be created.
-    :return None"""
+    :param topics_string:
+    """
 
     news_api = NewsApiClient(api_key='a68f4ec372ce4a6bae16c4bb7cd832fe')
     topics_file_path = os.path.join(get_app_root(), 'topics', topics_string)
@@ -28,12 +41,10 @@ def get_urls(topics_string):
             # remove new line character from topic string
             topic = topic.rstrip()
 
-            # Replace apostrophe's and capitalize each word in topic (for title url file)
-            capitalized_topic = (topic.replace('\'', '')).title()
+            topic_file_name = format_file_name(topic)
 
             # Create a new file to save result set
-            urls_file_path = os.path.join(get_app_root(), 'urls', topics_string.split('.')[0],
-                                          (capitalized_topic + '.txt').replace(' ', ''))
+            urls_file_path = os.path.join(get_app_root(), 'urls', topics_string.split('.')[0], topic_file_name)
             # Write result set of urls to new file
             with open(urls_file_path, 'w') as urls_file:
                 all_articles = news_api.get_everything(q=topic, sort_by='relevancy', page_size=100)

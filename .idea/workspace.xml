@@ -7,7 +7,7 @@
       <change beforePath="$PROJECT_DIR$/urls/economics_topics/BankingReform.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/urls/economics_topics/Bitcoin.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/urls/economics_topics/CurrencyManipulation.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/urls/economics_topics/ElizabethWarren'SWealthTax.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/urls/economics_topics/ElizabethWarrensWealthTax.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/urls/economics_topics/EnergyTransition.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/urls/economics_topics/EqualPay.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/urls/economics_topics/FossilFuelDivestment.txt" beforeDir="false" />
@@ -56,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script/url_fetcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="31" column="65" lean-forward="true" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+            <state relative-caret-position="110">
+              <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
               <folding>
                 <element signature="e#124#133#0" expanded="true" />
               </folding>
@@ -212,23 +212,23 @@
       <option name="presentableId" value="Default" />
       <updated>1578858739290</updated>
       <workItem from="1578858745849" duration="3514000" />
-      <workItem from="1579251283739" duration="10267000" />
+      <workItem from="1579251283739" duration="11142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13781000" />
+    <option name="totallyTimeSpent" value="14656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-254" y="-1017" width="1767" height="983" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20521739" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20521739" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26599327" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26599327" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -250,12 +250,9 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/URL_fetcher$url_fetcher.coverage" NAME="url_fetcher Coverage Results" MODIFIED="1580289947296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
+    <SUITE FILE_PATH="coverage/URL_fetcher$url_fetcher.coverage" NAME="url_fetcher Coverage Results" MODIFIED="1580290558206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/topics/economics_topics.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/topics/politics_topics.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -265,10 +262,10 @@
     <entry file="file://$PROJECT_DIR$/urls/Freespeechandinternetregulation&#10;.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls/economics_topics/RetirementAge.txt">
+    <entry file="file://$PROJECT_DIR$/urls/economics_topics/Retirementage.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls/economics_topics/BankingReform.txt">
+    <entry file="file://$PROJECT_DIR$/urls/economics_topics/Bankingreform.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="123" />
@@ -278,10 +275,13 @@
     <entry file="file://$PROJECT_DIR$/urls/economics_topics/Trans-PacificPartnership.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/topics/economics_topics.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/script/url_fetcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="31" column="65" lean-forward="true" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+        <state relative-caret-position="110">
+          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
           <folding>
             <element signature="e#124#133#0" expanded="true" />
           </folding>

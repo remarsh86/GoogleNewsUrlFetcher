@@ -27,6 +27,7 @@ https://www.bbc.com/news/business-51055491
 https://www.statista.com/chart/20544/forecast-cost-of-brexit-compared-to-the-uks-eu-budget-contributions/
 https://www.spiegel.de/politik/ausland/britisches-parlament-ratifiziert-brexit-abkommen-a-fe12ef11-f980-4423-910c-76191f2da597
 https://news.yahoo.com/us-talks-trade-deal-post-094517845.html
+https://www.lemonde.fr/international/article/2020/01/29/un-sentiment-d-insecurite-permanent-a-oxford-les-etudiants-dans-l-angoisse-du-brexit_6027607_3210.html
 https://amp.theguardian.compolitics/2020/jan/02/labour-leader-favourite-starmer-calls-to-rebuild-party-as-force-for-good
 https://www.businessinsider.com/us-uk-dominated-political-minority-brexit-trump-senate-2019-12
 http://techcrunch.com/2020/01/22/language-platform-busuu-acquires-video-tutor-startup-now-plans-ipo/
@@ -86,15 +87,14 @@ https://www.businessinsider.com/federal-reserve-payments-treasury-hit-decade-low
 https://www.engadget.com/2020/01/26/uk-will-not-implement-eu-copyright-directive/
 https://www.tagesschau.de/ausland/brexit-unterhaus-149.html
 https://www.tagesschau.de/ausland/oberhaus-brexitgesetz-101.html
-https://www.bloomberg.com/news/videos/2019-12-31/2020-what-s-next-for-brexit-video
-https://www.bloomberg.com/news/articles/2020-01-17/brexit-bulletin-pound-under-pressure
-https://www.bloomberg.com/news/articles/2020-01-14/brexit-bulletin-johnson-s-big-ben-bong-plan-falls-flat
 https://www.bloomberg.com/news/articles/2020-01-09/brexit-bulletin-barnier-s-back-alright
 https://www.bloomberg.com/news/articles/2020-01-22/brexit-bulletin-the-next-chapter
 https://www.bloomberg.com/news/articles/2020-01-13/brexit-bulletin-will-bank-of-england-cut-rates-before-brexit
+https://www.bloomberg.com/news/videos/2019-12-31/2020-what-s-next-for-brexit-video
+https://www.bloomberg.com/news/articles/2020-01-17/brexit-bulletin-pound-under-pressure
+https://www.bloomberg.com/news/articles/2020-01-14/brexit-bulletin-johnson-s-big-ben-bong-plan-falls-flat
 https://www.bloomberg.com/news/articles/2020-01-10/brexit-bulletin-eu-exit-has-already-cost-britain-170-billion
 https://www.bloomberg.com/news/articles/2020-01-27/brexit-bulletin-eu-talks-are-stuff-of-boris-johnson-s-nightmares-k5wq3nhj
 https://www.bloomberg.com/news/articles/2020-01-24/brexit-bulletin-place-your-bets
 http://techcrunch.com/2020/01/07/facebook-bans-deceptive-deepfakes-and-some-misleadingly-modified-media/
 https://timesofindia.indiatimes.com/world/uk/british-mps-finally-approve-brexit-deal/articleshow/73178579.cms
-https://www.bbc.co.uk/news/technology-51283059

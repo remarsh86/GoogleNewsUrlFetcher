@@ -7,7 +7,6 @@ https://time.com/5762629/taiwan-tsai-ing-wen-reelected/
 https://abcnews.go.com/International/protests-lebanon-reach-intensity-dozens-hospital-analysis/story?id=68404196
 https://timesofindia.indiatimes.com/business/india-business/imf-cuts-indias-growth-forecast-the-most-to-4-8/articleshow/73454269.cms
 https://timesofindia.indiatimes.com/world/pakistan/pakistan-weekly-round-up-imrans-sponsored-trip-to-davos-pcbs-warning-to-bcci-and-more/articleshow/73664634.cms
-https://www.chicagotribune.com/marijuana/illinois/ct-illinois-marijuana-legalization-on-jan-1-20191227-aa52o6wmrnegvfpgb55uedlgcq-story.html
 https://www.fool.com/investing/the-5-biggest-marijuana-milestones-in-2019.aspx
 https://www.forbes.com/sites/tomangell/2020/01/25/trump-says-marijuana-makes-people-lose-iq-points-in-secret-recording/
 https://www.spiegel.de/netzwelt/netzpolitik/36c3-videotipps-genervt-vom-online-banking-sie-sind-nicht-allein-a-1303100.html
@@ -34,10 +33,8 @@ https://economictimes.indiatimes.com/news/politics-and-nation/release-kashmir-po
 https://www.fool.com/earnings/call-transcripts/2020/01/27/opus-bank-opb-q4-2019-earnings-call-transcript.aspx
 https://www.insightsonindia.com/2019/12/28/insights-into-editorial-key-steps-to-kick-starting-the-economy/
 https://www.reuters.com/article/us-austria-politics-deal-factbox-idUSKBN1Z6249
-https://www.eastasiaforum.org/2019/12/28/chinas-incomplete-financial-reform/
 https://www.vanguardngr.com/2020/01/budget-2020-cut-in-capital-expenditure-calls-for-reform-fiscal-discipline/
 https://www.aljazeera.com/news/2020/01/security-forces-fire-tear-gas-night-lebanon-clashes-200116053638585.html
-https://finance.yahoo.com/news/bahamian-dollar-cbdc-announced-235953851.html
 https://news.yahoo.com/first-financial-bankshares-inc-completes-210200756.html
 https://www.vox.com/the-goods/2020/1/24/21080573/hot-girls-for-bernie-sanders-emily-ratajkowski
 https://www.firstpost.com/world/top-us-diplomat-alice-wells-says-pakistan-not-meeting-fatf-obligations-would-be-devastating-for-islamabads-economic-reform-program-7955041.html
@@ -46,6 +43,7 @@ https://www.eastasiaforum.org/2020/01/06/chinas-economy-needs-reform-reform-refo
 https://news.yahoo.com/clarfeld-citizens-private-wealth-names-143000645.html
 https://news.yahoo.com/mercantile-bank-corporation-increases-regular-100000553.html
 https://www.bostonglobe.com/2020/01/10/marijuana/joe-kennedy-formerly-anti-marijuana-cosponsors-comprehensive-legalization-bill/
+https://www.irishtimes.com/news/social-affairs/legal-measures-to-protect-elderly-and-vulnerable-listed-in-report-1.4154340
 http://www.euractiv.com/section/economy-jobs/interview/centeno-europe-should-make-room-for-green-investments-to-happen/
 https://finance.yahoo.com/news/marquette-national-corporation-increases-quarterly-120000822.html
 https://www.economist.com/briefing/2020/01/18/americas-aggressive-use-of-sanctions-endangers-the-dollars-reign
@@ -90,7 +88,6 @@ https://finance.yahoo.com/news/chinas-44-trillion-market-opening-220000458.html
 https://www.livemint.com/news/india/nationwide-trade-unions-strike-today-five-things-to-know-11578458203536.html
 https://www.fool.com/earnings/call-transcripts/2020/01/21/signature-bank-sbny-q4-2019-earnings-call-transcri.aspx
 https://www.fool.com/earnings/call-transcripts/2020/01/14/citigroup-inc-c-q4-2019-earnings-call-transcript.aspx
-https://pib.gov.in/newsite/PrintRelease.aspx?relid=196167
 https://www.freemalaysiatoday.com/category/business/2020/01/12/jack-ma-grab-eye-opportunities-in-singapore-digital-bank-battle/
 https://www.financialmirror.com/2020/01/05/a-brief-review-of-2019-and-business-priorities-for-2020/
 https://www.fool.com/earnings/call-transcripts/2020/01/14/jpmorgan-chase-co-jpm-q4-2019-earnings-call-transc.aspx
@@ -98,3 +95,6 @@ https://www.businesswire.com/news/home/20200127005686/en/Cambridge-Bancorp-Annou
 https://www.businesswire.com/news/home/20200122005905/en/Endeavor-Bank-Announces-2019-Year-Financial-Results
 https://www.kiplinger.com/slideshow/investing/T018-S001-30-massive-dividend-increases-from-the-past-year/index.html
 https://news.yahoo.com/tengasco-announces-review-potential-business-114500231.html
+https://news.yahoo.com/cnb-community-bancorp-inc-reports-231700829.html
+https://news.yahoo.com/svb-financial-group-board-directors-220000977.html
+https://www.cbsnews.com/news/where-is-marijuana-legal-in-2020-illinois-joins-10-other-states-legalizing-recreational-pot-2020-01-01/

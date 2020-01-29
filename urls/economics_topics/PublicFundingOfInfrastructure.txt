@@ -20,7 +20,6 @@ https://news.yahoo.com/climate-change-threatens-americas-cities-110012924.html
 https://www.npr.org/sections/goatsandsoda/2020/01/24/797182641/is-davos-as-bad-as-critics-say-global-leaders-weigh-in
 https://www.usatoday.com/story/news/politics/2020/01/09/trump-ease-environmental-rules-construction-projects/4417945002/?utm_source=google&utm_medium=amp&utm_campaign=speakable
 https://hbr.org/2020/01/how-global-leaders-should-think-about-solving-our-biggest-problems
-https://media.ccc.de/v/36c3-11172-leaving_legacy_behind
 https://www.entrepreneur.com/article/345070
 https://phys.org/news/2020-01-federal-funding-americans-habits.html
 https://www.huffpost.com/entry/takeaways-democratic-presidential-debate-iowa_n_5e1e99fac5b673621f6d775e
@@ -34,7 +33,9 @@ https://timesofindia.indiatimes.com/blogs/toi-editorials/the-indian-paradox-stat
 https://techcrunch.com/2019/12/30/vmware-completes-2-7-billion-pivotal-acquisition/
 https://news.yahoo.com/hbcu-students-for-biden-launch-162405077.html
 https://www.thehindu.com/opinion/editorial/a-weak-test-the-hindu-editorial-on-swachh-ranking-of-cities/article30463629.ece
+https://time.com/5773261/middle-east-peace-plan-details/
 https://readwrite.com/2020/01/06/6-industries-blockchain-technology-will-revolutionize/
+https://time.com/5773138/trump-israel-palestine-peace-plan/
 https://www.forbes.com/sites/jasonbrett/2020/01/21/israeli-counter-terrorism-institute-reports-hamas-using-bitcoin-as-a-funding-source/
 https://www.technologyreview.com/s/615045/climate-change-green-infrastructure-us-public-works-building-boom/
 https://www.autocar.co.uk/car-news/industry/uk-government-doubles-funding-ev-infrastructure
@@ -65,7 +66,8 @@ https://newrepublic.com/article/156165/trump-finds-new-way-lick-boot-fossil-fuel
 https://www.curbed.com/2020/1/10/21059102/buttigieg-2020-election-infrastructure-mayor-pete
 https://www.thisismoney.co.uk/money/cars/article-7911049/Government-double-funding-new-street-electric-car-chargers-2021.html
 https://www.usatoday.com/story/news/50-states/2020/01/27/protest-prisons-skeleton-board-monarch-slump-news-around-states/41072781/?utm_source=google&utm_medium=amp&utm_campaign=speakable
-https://www.aljazeera.com/news/2019/12/africa-scene-contemporary-art-fairs-2020-191219131711242.html
+https://phys.org/news/2020-01-major-japan-ocean-microplastics-survey.html
+https://news.yahoo.com/trump-finally-presenting-middle-east-201013037.html
 https://www.coindesk.com/nervos-network-dedicates-30m-for-grants-to-encourage-third-party-development
 https://www.forbes.com/sites/ilkerkoksal/2020/01/02/vmware-closes-27-billion-acquisition-of-pivotal-software/
 https://slate.com/news-and-politics/2020/01/intelligence-agencies-want-to-get-out-of-their-annual-congressional-briefing-so-they-wont-have-to-contradict-trump.html
@@ -96,5 +98,3 @@ https://blogs.gartner.com/rene-buest/2020/01/06/retrospective-view-published-res
 https://pib.gov.in/newsite/PrintRelease.aspx?relid=196212
 https://www.theatlantic.com/international/archive/2019/12/eu-hungary-press-freedom/603985/
 https://seekingalpha.com/article/4318763-ianthus-stuck-in-limbo-after-disappointing-2019
-https://www.hartfordbusiness.com/article/business-center-records-an-assist-on-meridens-ongoing-development-wave
-https://www.reuters.com/article/us-chile-politics-idUSKBN1ZQ17W

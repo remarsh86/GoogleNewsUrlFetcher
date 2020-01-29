@@ -15,7 +15,6 @@ https://economictimes.indiatimes.com/news/politics-and-nation/india-keeps-close-
 https://www.aljazeera.com/news/2020/01/iranian-leader-failed-200110191759172.html
 https://www.nybooks.com/articles/2020/02/13/middle-east-trump-blunders-in/
 https://theintercept.com/2020/01/10/us-strike-abdul-reza-shahlai-yemen/
-https://www.thehindu.com/news/international/un-ups-2020-budget-includes-funds-for-war-crimes-probes/article30418575.ece
 https://www.telegraph.co.uk/global-health/terror-and-security/yemen-tops-list-countries-crisis-second-year-running/
 https://www.economist.com/the-world-this-week/2020/01/23/politics-this-week
 https://www.economist.com/the-world-this-week/2020/01/25/politics-this-week
@@ -69,13 +68,13 @@ https://www.moneycontrol.com/news/world/7-countries-lose-vote-in-un-general-asse
 https://www.theamericanconservative.com/articles/trump-is-right-afghanistan-is-a-loser-war/
 https://phys.org/news/2019-12-decade-satellite-images-stories.html
 https://www.salon.com/2020/01/27/the-american-chaos-machine-us-foreign-policy-goes-off-the-rails_partner/
+http://www.brookings.edu/blog/order-from-chaos/2020/01/28/creating-a-political-strategy-for-stabilizing-fragile-states/
 https://www.wnycstudios.org/podcasts/radiolab/episodes/60-words
 https://www.thedailybeast.com/trump-iran-and-where-the-forever-war-was-always-headed
 https://www.seattletimes.com/nation-world/on-day-u-s-forces-killed-soleimani-they-launched-another-secret-operation-targeting-senior-iranian-official-in-yemen/
 https://news.yahoo.com/yemen-separatists-government-troops-pull-103003207.html
 https://news.yahoo.com/houthi-rebels-kill-least-70-185442386.html
 https://mises.org/wire/uss-latest-bombing-shows-us-lost-iraq-war
-https://www.channelnewsasia.com/news/world/un-ups-2020-budget--includes-funds-for-war-crimes-probes-12216748
 https://www.forbes.com/sites/jacknasher/2019/12/29/top-10-world-changing-negotiations-for-2020/
 https://www.thedailybeast.com/donald-trump-killed-qassem-soleimani-the-man-but-can-he-kill-the-myth
 https://www.seattletimes.com/nation-world/nation/7-countries-lose-vote-in-un-general-assembly-over-arrears/
@@ -98,3 +97,4 @@ https://theweek.com/articles/887007/4-lies-about-americas-perpetual-wars
 https://www.bbc.co.uk/news/world-middle-east-51021854
 https://www.forbes.com/sites/daneberhart/2020/01/03/global-oil-supply-glut-gives-trump-room-to-maneuver-on-iran/
 https://news.yahoo.com/saudi-led-coalition-resumes-airstrikes-191513674.html
+https://www.cfr.org/article/dont-hold-your-breath-democratic-change-middle-east

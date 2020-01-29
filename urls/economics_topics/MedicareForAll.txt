@@ -41,8 +41,8 @@ https://www.theatlantic.com/ideas/archive/2020/01/all-things-trump-doing-under-c
 https://slate.com/business/2020/01/pete-buttigieg-health-care-plan-retroactive-enrollment.html
 https://www.huffpost.com/entry/bernie-sanders-goes-after-biden-false-claims-iraq-war_n_5e1402dce4b0b2520d26d3cb
 https://www.businessinsider.com/bill-gates-calls-tax-hike-wealthy-new-years-eve-blog-2020-1
-https://www.buzzfeednews.com/article/addybaird/congress-progressives-medicare-for-all-2020-house-democrats
 https://www.theatlantic.com/health/archive/2020/01/warren-defends-her-pricey-health-care-plan/604957/
+https://time.com/5773211/trillion-dollar-budget-deficit-2020/
 https://indianexpress.com/article/world/elizabeth-warren-isnt-talking-much-about-medicare-for-all-anymore-6195694/
 https://news.yahoo.com/amy-klobuchar-running-president-2020-192600718.html
 https://www.businessinsider.com/apple-google-amazon-microsoft-fhir-tools-for-medical-records-2020-1
@@ -71,16 +71,17 @@ https://www.vice.com/en_us/article/5dm9z5/check-out-this-video-of-bloomberg-taki
 http://globalnews.ca/news/6345148/us-presidential-election-2020/
 https://www.fool.com/retirement/2020/01/10/3-medicare-mistakes-to-avoid-in-2020.aspx
 https://abcnews.go.com/Politics/wireStory/fears-sanders-win-growing-democratic-establishment-68139327
-https://news.yahoo.com/julian-castro-drops-democratic-presidential-141947747.html
 https://news.yahoo.com/joe-bidens-free-ride-over-110003741.html
+https://news.yahoo.com/julian-castro-drops-democratic-presidential-141947747.html
 https://www.marketwatch.com/story/the-ral-villain-of-the-opioid-crisis-is-the-healthcare-industry-experts-say-2020-01-05
-https://marginalrevolution.com/marginalrevolution/2020/01/from-bret-stephens.html
 https://www.huffpost.com/entry/americans-favor-wealth-tax_n_5e18d12fc5b6640ec3d4046a
+https://marginalrevolution.com/marginalrevolution/2020/01/from-bret-stephens.html
 https://www.huffpost.com/entry/political-priority-poll_n_5e18ae08c5b6640ec3d391d2
 https://taskandpurpose.com/elizabeth-warren-interview
 https://www.digitaltrends.com/news/watch-7th-democratic-debate-january-2020-livestream-start-time-candidates/
 https://www.politico.com/news/2020/01/04/warren-2020-strategy-093641
 https://thehill.com/hilltv/rising/479056-former-health-insurance-executive-current-system-is-bankrupting-country
+https://www.huffpost.com/entry/iowa-caucus-democrats-tv-ads-electability_n_5e304f5fc5b6d34ea10598bd
 https://www.wsj.com/articles/get-ready-for-a-contested-convention-11577836484
 https://www.fool.com/retirement/2020/01/13/4-ways-to-make-the-most-of-medicare-in-2020.aspx
 https://www.forbes.com/sites/dianeomdahl/2020/01/21/the-medicare-part-d-drug-plan-donut-hole-is-closed-what-does-that-mean/
@@ -97,4 +98,3 @@ https://time.com/5757722/elizabeth-warren-disability-plan/
 https://www.forbes.com/sites/brucejapsen/2020/01/19/insurers-level-more-blows-to-medicare-for-all/
 https://boingboing.net/2020/01/09/the-forever-kid.html
 https://www.forbes.com/sites/brucejapsen/2020/01/01/medicare-for-all-could-die-in-2020-as-insurers-add-seniors/
-https://www.forbes.com/sites/howardgleckman/2020/01/10/why-wont-congress-ease-medicare-enrollment-for-those-not-yet-taking-social-security/

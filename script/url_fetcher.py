@@ -28,7 +28,8 @@ def get_urls(topics_string):
             # remove new line character from topic string
             topic = topic.rstrip()
 
-            capitalized_topic = topic.title()
+            # Replace apostrophe's and capitalize each word in topic (for title url file)
+            capitalized_topic = (topic.replace('\'', '')).title()
 
             # Create a new file to save result set
             urls_file_path = os.path.join(get_app_root(), 'urls', topics_string.split('.')[0],

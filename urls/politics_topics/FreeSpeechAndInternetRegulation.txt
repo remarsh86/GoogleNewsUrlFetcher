@@ -6,6 +6,7 @@ https://www.businessinsider.com/nancy-pelosi-slams-facebook-mark-zuckerberg-vide
 https://www.forbes.com/sites/waynecrews/2020/01/07/deepfakes-and-beyond-who-wins-if-social-media-platforms-are-regulated/
 https://www.latimes.com/business/story/2019-12-27/susan-wojcicki-youtube-responsible
 https://betanews.com/2019/12/30/how-censorship-in-silicon-valley-is-killing-free-speech/
+https://www.washingtontimes.com/news/2020/jan/28/koch-networks-new-agenda-combat-activists-grip-tec/
 https://www.techspot.com/news/83604-joe-biden-wants-make-facebook-liable-users-content.html
 https://www.eff.org/deeplinks/2020/01/speaking-freely-interview-addie-wagenknecht
 https://jezebel.com/well-it-sure-was-a-big-year-for-the-call-out-culture-wi-1840240922
@@ -13,6 +14,7 @@ https://www.forbes.com/sites/forbescommunicationscouncil/2020/01/22/the-next-dec
 https://www.nakedcapitalism.com/2020/01/200pm-water-cooler-1-21-2020.html
 https://www.slashgear.com/tech-trends-in-the-next-decade-04605288/
 https://locusmag.com/2020/01/cory-doctorow-inaction-is-a-form-of-action/
+https://www.dawn.com/news/1531052
 https://www.forbes.com/sites/forbescoachescouncil/2020/01/28/these-seven-digital-trends-could-impact-your-career-in-2020/
 https://www.cnn.com/2020/01/10/politics/facebook-political-ads-decision/index.html
 https://www.washingtonexaminer.com/policy/economy/ted-cruz-is-encouraged-by-democrats-on-big-tech
@@ -40,7 +42,7 @@ https://ec.europa.eu/digital-single-market/en/news/building-safer-and-better-dig
 http://www.euractiv.com/section/digital/news/digital-brief-wiretapping-in-the-age-of-5g/
 https://articles.mercola.com/sites/articles/archive/2020/01/07/google-big-tech-bought-congress.aspx
 https://www.bostonglobe.com/2020/01/09/opinion/other-bigger-privacy-problem/
-https://www.abc.net.au/news/2019-12-28/future-predictions-and-technology-antony-funnell-future-tense/11773096
+http://feedproxy.google.com/~r/cato-unbound/~3/hXpJN8A9XiY/reply-feerst-rinehart
 https://www.les-crises.fr/sacha-baron-cohen-s-attaque-a-facebook/
 https://www.politico.com/newsletters/morning-tech/2020/01/22/trump-breaks-bread-with-tech-execs-784561
 https://www.businesstoday.in/current/economy-politics/regulations-are-important-to-protect-free-speech-online-say-experts-at-sflc-panel-on-intermediary-liability-law/story/394161.html
@@ -96,5 +98,3 @@ https://variety.com/2020/digital/news/joe-biden-slams-facebook-calls-for-revokin
 https://www.washingtonpost.com/politics/2020/01/07/anatomy-trump-rally-percent-claims-are-false-or-lacking-evidence/
 https://www.theverge.com/2020/1/16/21067793/guns-online-armslist-marketplace-craigslist-sales-buy-crime-investigation
 https://arxiv.org/search/cs?searchtype=author&query=Guan%2C+Y
-https://foreignpolicy.com/2020/01/16/europe-technology-sovereignty-von-der-leyen/
-https://www.dailymail.co.uk/news/article-7839083/Tech-giant-bosses-JAILED-Britain-firms-fail-protect-users.html

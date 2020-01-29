@@ -8,7 +8,6 @@ https://www.businessinsider.com/the-uk-economy-limped-into-decade-brexit-uncerta
 https://www.businessinsider.com/opening-bell-january-17-2020-2020-1
 https://ca.finance.yahoo.com/news/china-temporarily-suspends-shanghai-london-062654667.html
 https://www.economist.com/the-world-this-week/2020/01/18/politics-this-week
-https://www.bbc.co.uk/news/in-pictures-50808606
 https://news.yahoo.com/trump-impeachment-president-legal-team-103519822.html
 https://news.yahoo.com/uk-brexit-bill-becomes-law-144659052.html
 https://abcnews.go.com/International/uk-election-suggests-disinformation-spread-politicians-bigger-threat/story?id=67784381
@@ -44,6 +43,7 @@ https://www.reuters.com/article/us-britain-politics-labour-factbox-idUSKBN1ZK1WR
 https://www.reuters.com/article/us-britain-eu-idUSKBN1Z62N0
 https://www.nationalreview.com/news/boris-johnson-to-allow-huawei-access-defying-u-s-wishes/
 https://www.aljazeera.com/news/2020/01/britain-moves-closer-leaving-eu-mps-scrutinise-brexit-deal-200107135647841.html
+https://www.theatlantic.com/ideas/archive/2020/01/after-brexit-new-identity-crises-await-uk/605692/
 https://economictimes.indiatimes.com/news/international/business/queen-gives-assent-for-britain-to-leave-eu/articleshow/73562459.cms
 https://www.dailymail.co.uk/news/article-7885427/Boris-Johnson-Report-Russian-interference-British-democracy-published-weeks.html
 https://www.forbes.com/sites/alasdairlane/2020/01/15/huawei-britains-brexit-future-at-stake-as-uk--us-clash/
@@ -55,8 +55,8 @@ https://www.telegraph.co.uk/technology/2020/01/08/ofcom-broadband-changes-spell-
 https://www.bbc.co.uk/news/uk-politics-50956221
 https://www.forbes.com/sites/forbesbusinesscouncil/2020/01/16/the-dark-side-of-deepfake-artificial-intelligence-and-virtual-influencers/
 https://www.independent.co.uk/voices/trump-boris-johnson-mexico-border-wall-hs2-2020-election-us-a9301606.html
-https://ritholtz.com/2020/01/mea-culpas-2019-edition/
 https://news.yahoo.com/world-welcomes-amid-wildfires-protests-122359965.html
+https://ritholtz.com/2020/01/mea-culpas-2019-edition/
 https://economictimes.indiatimes.com/news/international/world-news/brexit-pm-johnson-vows-to-take-uk-out-of-european-union/articleshow/73058599.cms
 https://www.euronews.com/2020/01/03/johnson-adviser-dominic-cummings-wants-weirdos-and-misfits-in-top-government-jobs
 https://www.nakedcapitalism.com/2020/01/conservative-win-in-britain-means-more-than-economic-trouble-ahead.html
@@ -72,8 +72,8 @@ https://news.yahoo.com/trumps-actions-iraq-could-plunge-165000138.html
 https://www.dailymail.co.uk/news/article-7843531/Boris-Johnson-orders-hunt-unearth-Whitehall-mole-leaked-confidential-documents-Labour.html
 https://news.yahoo.com/uncharted-brexit-waters-uks-boris-075721411.html
 https://www.thehindu.com/news/international/brexit-pm-johnson-vows-to-take-uk-out-of-european-union/article30452294.ece
-https://indianexpress.com/article/world/landmark-brexit-bill-for-uks-divorce-from-eu-finally-clears-commons-vote-6210107/
 https://www.bbc.com/news/uk-politics-51051178
+https://indianexpress.com/article/world/landmark-brexit-bill-for-uks-divorce-from-eu-finally-clears-commons-vote-6210107/
 https://www.dailymail.co.uk/debate/article-7843971/STEPHEN-GLOVER-Boris-Johnson-never-forgiven-doesnt-tackle-foreign-aid-farce.html
 https://www.aljazeera.com/news/2020/01/uk-foreign-minister-rebukes-extradition-refusal-200124112406931.html
 https://www.independent.co.uk/news/uk/politics/boris-johnson-social-care-plan-bbc-breakfast-election-latest-a9282611.html
@@ -81,7 +81,6 @@ https://www.breitbart.com/europe/2019/12/31/corbyn-says-labour-is-resistance-bor
 https://news.yahoo.com/monday-morning-news-briefing-not-072853039.html
 https://www.nakedcapitalism.com/2020/01/will-italys-sardines-be-effective-in-the-upcoming-regional-election.html
 https://www.nature.com/articles/d41586-020-00012-9?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+nature%2Frss%2Fcurrent+%28Nature+-+Issue%29
-https://www.euronews.com/2019/12/27/top-eu-official-warns-transition-period-for-brexit-might-have-to-be-delayed
 https://www.aljazeera.com/news/2020/01/venezuela-intelligence-agents-raid-guaido-offices-opposition-200122040320110.html
 https://www.wsj.com/articles/u-k-lawmakers-approve-brexit-bill-11578591123
 https://www.moneycontrol.com/news/world/uk-pm-boris-johnson-defeated-on-brexit-legislation-for-first-time-since-election-4837181.html
@@ -98,3 +97,4 @@ https://www.thehindu.com/news/international/brexit-bill-becomes-law-after-receiv
 https://www.euronews.com/2020/01/26/new-brexit-coin-unveiled-as-britain-prepares-to-leave-eu
 https://www.independent.co.uk/voices/scotland-indyref-snp-nicola-sturgeon-boris-letter-independence-referendum-a9289756.html
 https://www.dailymail.co.uk/news/article-7885541/Boris-Johnson-REJECTS-Nicola-Sturgeons-demand-fresh-Scottish-independence-referendum.html
+https://www.independent.co.uk/voices/boris-johnson-opposition-labour-lib-dem-green-pact-climate-alliance-a9266211.html

@@ -1,7 +1,6 @@
 https://www.bbc.co.uk/news/world-us-canada-51084859
 https://www.wired.com/story/soothing-power-asmr-youtube-videos/
 https://www.wired.com/story/heres-what-the-world-will-look-like-in-2030-right/
-https://www.bbc.co.uk/news/world-europe-50927648
 https://hardware.slashdot.org/story/20/01/23/2228252/germany-rejected-nuclear-power----and-deadly-emissions-spiked
 https://www.cnn.com/2019/12/31/opinions/2020-prime-time-vladimir-putin-vinograd/index.html
 https://gizmodo.com/alert-warning-of-emergency-at-canadian-nuclear-plant-se-1840982740
@@ -12,7 +11,6 @@ https://www.youtube.com/watch?v=Zai2M-Wb4C4
 http://www.eleceng.adelaide.edu.au/personal/dabbott/publications/AQR_abbott2016.pdf
 https://www.reuters.com/article/us-iraq-security-blast-relations-timelin-idUSKBN1Z21R8
 https://hackaday.com/2020/01/10/hide-silent-hide-deep-submarine-tracking-technologies-of-the-cold-war/
-https://time.com/5754581/visaginas-nuclear-town-chernobyl/
 https://www.businessinsider.com/iran-trump-nuclear-deal-dead-cannot-save-2020-1
 https://news.yahoo.com/nine-years-testing-atomic-bomb-143000753.html
 https://www.npr.org/2020/01/14/796199041/left-with-no-choice-european-allies-put-iran-on-notice-over-nuclear-deal-breache
@@ -59,14 +57,12 @@ https://abcnews.go.com/International/stay-vigilant-north-korea-failure-deliver-c
 https://theconversation.com/how-countries-in-conflict-like-iran-and-the-us-still-talk-to-each-other-129591
 https://www.vice.com/en_us/article/m7qady/animals-thrive-in-areas-evacuated-by-humans-after-fukushima-nuclear-disaster
 https://www.usatoday.com/story/opinion/2020/01/22/donald-trump-impeachment-defense-oath-of-office-means-nothing-column/4531795002/
-https://www.telegraph.co.uk/news/2019/12/28/nuclear-power-plant-uae-risks-sparking-arms-race-expert-warns/
 https://earther.gizmodo.com/joe-biden-says-no-scientists-back-bernie-sanders-clima-1841209845
 https://www.businessinsider.com/house-foreign-affairs-trump-tweet-iran-strike-youre-not-dictator-2020-1
 https://news.yahoo.com/does-russia-really-100-megaton-203000325.html
 https://www.economist.com/the-world-this-week/2020/01/25/politics-this-week
 https://www.economist.com/the-world-this-week/2020/01/23/politics-this-week
 https://blogs.scientificamerican.com/observations/the-peril-and-power-of-following-the-evidence/
-https://taskandpurpose.com/navy-long-range-anti-ship-missile-early-operational-capability
 https://www.usatoday.com/in-depth/news/2019/12/27/climate-change-satellite-images-show-decade-changes/2749474001/
 https://www.bloomberg.com/news/videos/2020-01-21/hitachi-s-nakanishi-on-business-model-ev-investments-nuclear-power-video
 https://www.reuters.com/article/us-oman-succession-sultan-idUSKBN1ZA018
@@ -87,6 +83,7 @@ https://www.nature.com/articles/d41586-020-00111-7
 https://www.newyorker.com/tech/annals-of-technology/should-the-us-expect-an-iranian-cyberattack
 https://www.theatlantic.com/ideas/archive/2020/01/suleimani/604402/
 https://www.neatorama.com/2020/01/26/Rolls-Royce-To-Install-And-Operate-Mini-Nuclear-Stations-By-2029/
+https://news.yahoo.com/why-did-russias-carrier-guns-150000453.html
 http://globalnews.ca/news/6363126/iran-airstrike-revenge-retaliation/
 https://phys.org/news/2020-01-fallout-false-nuclear-alarm.html
 https://www.itsnicethat.com/articles/giles-price-restricted-residence-photography-130120
@@ -98,3 +95,6 @@ https://time.com/5765702/india-protests-women/
 https://mashable.com/article/best-time-in-history/
 https://gizmodo.com/the-anatomy-of-online-bullshit-in-the-fog-of-impending-1840798261
 https://www.huffpost.com/entry/trump-iran-attacks-embassies-pompeo_n_5e19260ec5b650c621deae81
+https://phys.org/news/2020-01-relativistic-effects-laser-fusion-approach.html
+https://www.theverge.com/2020/1/8/21056424/neon-ceo-artificial-humans-samsung-ai-ces-2020
+https://www.theatlantic.com/international/archive/2020/01/donald-trump-qassem-soleimani-iran-escalation/605053/

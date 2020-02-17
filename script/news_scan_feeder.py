@@ -1,46 +1,158 @@
 """
-The purpose of this function(?)/script is:
+Purpose:
 1. For each topic, feed each fetched url into NewsScan Software through the NewsScan domain and port:
 http://ariadne.is.inf.uni-due.de:7999/nutrition?
 2. Collect results (in json format) for each call to NewsScanner and save results to a csv file
 
-The resulting csv file will contain 100 rows, each row containing the resulting NewsScan scores for a url. The results
-for each topic will be saved in one csv file.
+The resulting csv file will contain 2000 rows, each row containing the resulting NewsScan scores for a url. The results
+for each category will be saved in one csv file.
 
 
 """
 import os
 import config
+import requests, json
+import csv
+import numpy as np
+import logging
+
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 
-def open_url_file():
-    """
-    The following opens the topics files containing the result set from Google News for each topic and feeds the URLS
-    into the evaluate_url function.
+def feed_news_scan():
+    """The following opens the topics files containing the result set of URL's from Google News for each topic and feeds
+    the URLS into the evaluate_url function.
+
+    Function opens the directory containing topic txt files (which contain the result set of URL's)
     :return:
     """
     categories = config.get_categories()
     for category in categories:
         category = category.split('.')[0]
-        topics_file_path = os.path.join(config.get_app_root(), 'urls', category)
+        print(category)
+
+        topics_directory_path = os.path.join(config.get_app_root(), 'urls', category)
+
+        create_score_file(category)
 
         # walk the directory and find txt files
-        for root, dirs, files in os.walk(topics_file_path):
+        for root, dirs, files in os.walk(topics_directory_path):
             for filename in files:
                 if '.txt' in filename:
                     with open(os.path.join(config.get_app_root(), 'urls', category, filename), 'r') as url_file:
                         for url in url_file:
-                            evaluate_url(url)
+                            print(url)
+                            try:
+                                url = url.rstrip()
+                                evaluate(url, category)
+                            except Exception as e:
+                                # todo create Exception class
+                                logging.warning(f'{url.rstrip()} Could not be called by NewsScan')
+                                print("Could not access ", url)
 
 
-def evaluate_url(url):
-    """Feed URL into NewsScan domain and port
+def create_score_file(category):
+    with open(os.path.join(config.get_app_root(), 'evaluation', category + '.csv'), 'a+', newline='') as csv_file:
+        writer = csv.writer(csv_file)
+        writer.writerow(["url", "readability", "sentence_level_sentiment", "sentence_level_objectivity", "bias",
+                         "credibility", "trust_metric", "google_page_rank", "alexa_reach_rank"])
+
+
+def evaluate(url, category):
+    json_object = call_news_scan(config.get_newsscan_api() + url)
+    parse_json(json_object, category)
+
+
+def call_news_scan(url):
+    """Feed URL into NewsScan domain and port through an HTTP Request. Response will be a JSON object.
 
     :param url: URL of news article
-    :return:
+    :return: JSON response
     """
-    pass
+
+    try:
+        response = requests.get(url)
+        json_object = response.json()
+        return json_object
+    except requests.exceptions.RequestException as e:
+        logging.debug(f'Error accessing NewsScan due to {e}')
+        raise
+    except json.decoder.JSONDecodeError as e1:
+        logging.debug(f'Error accessing NewsScan due to {e1}')
+        raise
+    except Exception as er2:
+        logging.debug(f'Error accessing NewsScan due to {e2}')
+        raise
+
+
+def parse_json(j, category):
+    """Parse JSON Object (response from NewsScan) - j - and save critical information to the appropriate category csv file.
+    :param json_object:
+    """
+
+    # todo: Round results to 2 digits: round(answer, 2)
+    with open(os.path.join(config.get_app_root(), 'evaluation', category + '.csv'), 'a+', newline='') as csv_file:
+        if j['url'] != np.nan:
+            url = j['url']
+
+            if j['nutrition']['readability']['status'] == 'ok':
+                readability = j['nutrition']['readability']['main_score']
+            else:
+                readability = np.nan
+
+            if j['nutrition']['sentence_level_sentiment']['status'] == 'ok':
+                sentence_level_sentiment = j['nutrition']['sentence_level_sentiment']['main_score']
+            else:
+                sentence_level_sentiment = np.nan
+
+            if j['nutrition']['sentence_level_objectivity']['status'] == 'ok':
+                sentence_level_objectivity = j['nutrition']['sentence_level_objectivity']['main_score']
+            else:
+                sentence_level_objectivity = np.nan
+
+            if j['nutrition']['political bias']['status'] == 'ok':
+                bias = j['nutrition']['political bias']['main_score']
+            else:
+                bias = np.nan
+
+            # if j['nutrition']['credibility']['score'] != np.nan:
+            if j.get('nutrition').get('credibility').get('score') is not None:
+                # credibility = j['nutrition']['credibility']['score']
+                credibility = j.get('nutrition').get('credibility').get('score')
+            else:
+                credibility = np.nan
+
+            # if j['nutrition']['credibility']['Trust Metric'] != np.nan:
+            #     trust_metric = j['nutrition']['credibility']['Trust Metric']
+            if j.get('nutrition').get('credibility').get('Trust Metric') is not None:
+                trust_metric = j.get('nutrition').get('credibility').get('Trust Metric')
+            else:
+                trust_metric = np.nan
+
+            # if j['nutrition']['credibility']['Google PageRank'] != np.nan:
+            #     google_page_rank = j['nutrition']['credibility']['Google PageRank']
+            if j.get('nutrition').get('credibility').get('Google PageRank') is not None:
+                google_page_rank = j.get('nutrition').get('credibility').get('Google PageRank')
+            else:
+                google_page_rank = np.nan
+
+            # if j['nutrition']['credibility']['Alexa Reach Rank'] != np.nan:
+            #     alexa_reach_rank = j['nutrition']['credibility']['Alexa Reach Rank']
+            if j.get('nutrition').get('credibility').get('Alexa Reach Rank') is not None:
+                alexa_reach_rank = j.get('nutrition').get('credibility').get('Alexa Reach Rank')
+            else:
+                alexa_reach_rank = np.nan
+
+            print(readability, sentence_level_sentiment, sentence_level_objectivity, bias, credibility,
+                  trust_metric, google_page_rank, alexa_reach_rank)
+
+            # Write variables to csv_file
+            # writer = csv.writer(csv_file)
+            # writer.writerow([url, readability, sentence_level_sentiment, sentence_level_objectivity, bias,
+            #                          credibility, trust_metric, google_page_rank, alexa_reach_rank])
 
 
 if __name__ == '__main__':
-    open_url_file()
+    feed_news_scan()
+
+

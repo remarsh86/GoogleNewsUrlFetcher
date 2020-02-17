@@ -24,7 +24,7 @@ def get_urls(category):
     files will be created.
     :param category:
     """
-    news_api = NewsApiClient(api_key='a68f4ec372ce4a6bae16c4bb7cd832fe')
+    news_api = NewsApiClient(api_key=config.get_newsapi_key())
     topics_list_file_path = os.path.join(config.get_app_root(), 'topics', category)
 
     with open(topics_list_file_path, 'r') as topics_file:

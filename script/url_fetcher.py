@@ -1,6 +1,6 @@
 """
 Author: Rebecca Marsh
-This scripts is used for extracting online news results from a list of queries and
+This script is used for extracting online news results from a list of queries and
 copying their urls into a text file
 """
 

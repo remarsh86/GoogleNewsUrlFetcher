@@ -4,8 +4,8 @@ Purpose:
 http://ariadne.is.inf.uni-due.de:7999/nutrition?
 2. Collect results (in json format) for each call to NewsScanner and save results to a csv file
 
-The resulting csv file will contain 2000 rows, each row containing the resulting NewsScan scores for a url. The results
-for each category will be saved in one csv file.
+The resulting 2 csv files will contain (at most) 2000 rows each, each row containing the resulting NewsScan scores for a
+url. The results for each category will be saved in one csv file.
 
 
 """

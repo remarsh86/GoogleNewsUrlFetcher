@@ -30,6 +30,7 @@ def get_urls(category):
     with open(topics_list_file_path, 'r') as topics_file:
         for topic in topics_file:
             # remove new line character from topic string
+            # todo: does rstrip remove last t from string like in "Brexit"?
             topic = topic.rstrip()
 
             topic_file_name = format_file_name(topic)

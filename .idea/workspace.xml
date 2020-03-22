@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bc1d36e-6f79-489c-b5d5-59390989138e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evaluation/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation/economics_topics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation/politics_topics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/news_scan_feeder.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/news_scan_feeder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/url_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/url_fetcher.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,22 +16,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/url_fetcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+            <state relative-caret-position="165">
+              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
               <folding>
                 <element signature="e#149#158#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/script/news_scan_feeder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1525">
-              <caret line="128" column="87" selection-start-line="128" selection-start-column="87" selection-end-line="128" selection-end-column="87" />
-              <folding>
-                <element signature="e#436#445#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,14 +70,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
+            <state relative-caret-position="94">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#1275#1308#0" />
               </folding>
             </state>
           </provider>
@@ -129,6 +113,7 @@
       <find>times</find>
       <find>Could not access</find>
       <find>kiri</find>
+      <find>data_by_feature</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,7 +123,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/script/url_fetcher.py" />
         <option value="$PROJECT_DIR$/exceptions/news_scan_error.py" />
         <option value="$PROJECT_DIR$/topics/economics_topics.txt" />
         <option value="$PROJECT_DIR$/topics/politics_topics.txt" />
@@ -146,6 +130,7 @@
         <option value="$PROJECT_DIR$/scripts/news_scan_feeder.py" />
         <option value="$PROJECT_DIR$/script/news_scan_feeder.py" />
         <option value="$PROJECT_DIR$/evaluation/politics_topics.csv" />
+        <option value="$PROJECT_DIR$/script/url_fetcher.py" />
         <option value="$PROJECT_DIR$/evaluation/analysis.py" />
       </list>
     </option>
@@ -184,11 +169,6 @@
               <item name="URL_fetcher" type="b2602c69:ProjectViewProjectNode" />
               <item name="URL_fetcher" type="462c0819:PsiDirectoryNode" />
               <item name="script" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="URL_fetcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="URL_fetcher" type="462c0819:PsiDirectoryNode" />
-              <item name="topics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="URL_fetcher" type="b2602c69:ProjectViewProjectNode" />
@@ -325,24 +305,24 @@
       <workItem from="1578858745849" duration="3514000" />
       <workItem from="1579251283739" duration="11425000" />
       <workItem from="1580989678062" duration="7072000" />
-      <workItem from="1581505878398" duration="77700000" />
+      <workItem from="1581505878398" duration="83470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99711000" />
+    <option name="totallyTimeSpent" value="105481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-224" y="-1057" width="1866" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15350877" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15350877" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" weight="0.3257024" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" visible="true" weight="0.3220339" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" weight="0.5683616" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" weight="0.32542372" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" weight="0.259887" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" visible="true" weight="0.37966102" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -355,7 +335,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.31195176" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.2823465" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -395,14 +375,14 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/evaluation/analysis.py</url>
-          <line>61</line>
-          <option name="timeStamp" value="16" />
+          <line>92</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/URL_fetcher$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1584790382788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
+    <SUITE FILE_PATH="coverage/URL_fetcher$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1584902435700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
     <SUITE FILE_PATH="coverage/URL_fetcher$url_fetcher.coverage" NAME="url_fetcher Coverage Results" MODIFIED="1581950358093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/URL_fetcher$news_scan_feeder.coverage" NAME="news_scan_feeder Coverage Results" MODIFIED="1582725170172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
   </component>
@@ -441,11 +421,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/urls/politics_topics/Brexit.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1025" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urls/politics_topics/CubaEmbargo.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1025" />
@@ -709,33 +684,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
+    <entry file="file://$PROJECT_DIR$/script/news_scan_feeder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
+        <state relative-caret-position="1185">
+          <caret line="128" column="87" selection-start-line="128" selection-start-column="87" selection-end-line="128" selection-end-column="87" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#1275#1308#0" />
+            <element signature="e#436#445#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/script/url_fetcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+        <state relative-caret-position="165">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding>
             <element signature="e#149#158#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/news_scan_feeder.py">
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1525">
-          <caret line="128" column="87" selection-start-line="128" selection-start-column="87" selection-end-line="128" selection-end-column="87" />
+        <state relative-caret-position="174">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
           <folding>
-            <element signature="e#436#445#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

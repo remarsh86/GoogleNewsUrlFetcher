@@ -97,6 +97,7 @@ def parse_json(j, category, topic, rank):
     :param rank: Will be written into csv for use in plotting.
     :return:
     """
+    # todo: Add feature "credibility": "domain" for domain analysis
 
     with open(os.path.join(config.get_app_root(), 'evaluation', category + '.csv'), 'a+', newline='') as csv_file:
         if j['url'] is not None:
@@ -120,9 +121,15 @@ def parse_json(j, category, topic, rank):
                 sentence_level_objectivity = np.nan
 
             if j.get('nutrition').get('political bias').get('main_score') is not None:
-                bias = round(j.get('nutrition').get('political bias').get('main_score'), 2)
+                bias_score = round(j.get('nutrition').get('political bias').get('main_score'), 2)
             else:
-                bias = np.nan
+                bias_score = np.nan
+
+            # todo: Change News_scan_feeder to include bias label 'right', 'left', 'center', 'partialy left', ...
+            if j.get('nutrition').get('political bias').get('subfeatures')[0].get('name') is not None:
+                bias_label = j.get('nutrition').get('political bias').get('subfeatures')[0].get('name')
+            else:
+                bias_label = None
 
             if j.get('nutrition').get('credibility').get('score') is not None:
                 credibility = round(j.get('nutrition').get('credibility').get('score'), 2)
@@ -144,13 +151,13 @@ def parse_json(j, category, topic, rank):
             else:
                 alexa_reach_rank = np.nan
 
-            print(readability, sentence_level_sentiment, sentence_level_objectivity, bias, credibility,
+            print(readability, sentence_level_sentiment, sentence_level_objectivity, bias_score, bias_label, credibility,
                   trust_metric, google_page_rank, alexa_reach_rank)
 
-            # # Write variables to csv_file
+            # Write variables to csv_file
             # writer = csv.writer(csv_file)
-            # writer.writerow([rank, topic, url, readability, sentence_level_sentiment, sentence_level_objectivity, bias,
-            #                  credibility, trust_metric, google_page_rank, alexa_reach_rank])
+            # writer.writerow([rank, topic, url, readability, sentence_level_sentiment, sentence_level_objectivity,
+            #                   bias_score, credibility, trust_metric, google_page_rank, alexa_reach_rank])
 
 
 if __name__ == '__main__':

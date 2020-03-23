@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bc1d36e-6f79-489c-b5d5-59390989138e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evaluation/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/url_fetcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/url_fetcher.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,15 +30,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="626">
               <caret line="58" column="64" lean-forward="true" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/evaluation/politics_topics.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11803">
-              <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -73,10 +64,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="346">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#614#1077#1" />
+                <element signature="e#1983#3238#0" />
               </folding>
             </state>
           </provider>
@@ -139,7 +132,7 @@
     <option name="x" value="-224" />
     <option name="y" value="-1057" />
     <option name="width" value="1866" />
-    <option name="height" value="977" />
+    <option name="height" value="1051" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -305,15 +298,15 @@
       <workItem from="1578858745849" duration="3514000" />
       <workItem from="1579251283739" duration="11425000" />
       <workItem from="1580989678062" duration="7072000" />
-      <workItem from="1581505878398" duration="83470000" />
+      <workItem from="1581505878398" duration="92161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105481000" />
+    <option name="totallyTimeSpent" value="114172000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-224" y="-1057" width="1866" height="977" extended-state="0" />
+    <frame x="-224" y="-1057" width="1866" height="1051" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15350877" />
@@ -321,8 +314,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" weight="0.32542372" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" weight="0.259887" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" visible="true" weight="0.37966102" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" weight="0.4296142" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" visible="true" weight="0.3253389" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -335,7 +328,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.2823465" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.27083334" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -375,57 +368,67 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/evaluation/analysis.py</url>
-          <line>92</line>
-          <option name="timeStamp" value="21" />
+          <line>28</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/URL_fetcher$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1584902435700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
+    <SUITE FILE_PATH="coverage/URL_fetcher$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1584971741332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
     <SUITE FILE_PATH="coverage/URL_fetcher$url_fetcher.coverage" NAME="url_fetcher Coverage Results" MODIFIED="1581950358093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/URL_fetcher$news_scan_feeder.coverage" NAME="news_scan_feeder Coverage Results" MODIFIED="1582725170172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>topic_data[INL][topic_data['rank'] &lt;= 3].mean(skipna=True)</expression-string>
+        <expression-string>topic_df['readability'][topic_df['rank'] &lt;= i].mean(skipna=True) is np.nan</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>topic_data[INL][topic_data['rank'] &lt;= 3]</expression-string>
+        <expression-string>topic_df['readability'][topic_df['rank'] &lt;= i].mean(skipna=True) == np.nan</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>topic_data[INL][topic_data[rank] &lt;= 3]</expression-string>
+        <expression-string>topic_df['readability'][topic_df['rank'] &lt;= i] == np.nan</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>topic_data[INL]</expression-string>
+        <expression-string>topic_df['readability'][topic_df['rank'] &lt;= i]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>topic_data</expression-string>
+        <expression-string>topic_df['readability'][topic_df['rank'] &lt;= i].mean(skipna=True)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>url.rstrip('\n')</expression-string>
+        <expression-string>topic_dftopic_df['readability'][topic_df['rank'] &lt;= i].mean(skipna=True)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>topic_df['readability'][topic_df['rank']&lt;2].mean()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>topic_df['readability'][topic_df['rank']&lt;2]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>topic_df['readability']['rank'&lt;2]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/urls/politics_topics/CubaEmbargo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1025" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urls/politics_topics/Disarmament.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1025" />
@@ -635,13 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls/politics_topics/ClimateChange.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="58" column="64" lean-forward="true" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/topics/politics_topics.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -667,13 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="1972" selection-start-line="1972" selection-end-line="1972" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation/politics_topics.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11803">
-          <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -711,12 +700,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation/politics_topics.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18114">
+          <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urls/politics_topics/ClimateChange.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="58" column="64" lean-forward="true" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="346">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#614#1077#1" />
+            <element signature="e#1983#3238#0" />
           </folding>
         </state>
       </provider>

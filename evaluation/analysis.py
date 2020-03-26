@@ -17,16 +17,16 @@ def create_scatter_plots(topic_data, features):
         plt.show()
 
 
-def get_output_bias(df, INL):
+def get_output_bias(topic_df, features, output_bias_df):
     """
     Calculate output bias for top 3, 5, 10, 20 , 50 results per topic and return dataframe
     :param df: data of all INL scores
     :param feature: one INL feature
     :return: dataframe of output_bias_df
     """
+
     output_bias_df = pd.DataFrame()
-    for topic in df.topic.unique():
-        topic_df = df[df['topic'] == topic]
+    for INL in features:
         output_bias_dict = {'topic': topic,'INL': INL}
         for j in [3, 5, 10, 20, 50]:
             output_bias = 0
@@ -61,7 +61,7 @@ def get_output_averages(topic_dataframe, feature, df):
     topic_dataframe.reset_index(drop=True, inplace=True)
     for INL in feature:
         top_1 = topic_dataframe[INL][0]
-        print(f'Input bias of {INL} in {topic}: {topic_dataframe[INL].mean(skipna=True)}')
+        # print(f'Input bias of {INL} in {topic}: {topic_dataframe[INL].mean(skipna=True)}')
         input_bias = topic_dataframe[INL].mean(skipna=True)
         top_3 = topic_dataframe[INL][topic_dataframe['rank'] <= 3].mean(skipna=True)
         top_5 = topic_dataframe[INL][topic_dataframe['rank'] <= 5].mean(skipna=True)
@@ -127,26 +127,70 @@ def plot_topN_averages(df, feature):
     plt.show()
 
 
-def plot_output_bias(data_by_feature):
+def plot_output_bias_by_query(df, feature):
     """
 
     :param df:
     :return:
     """
-    # ax = df.plot(x='INL', y=['OB Rank 3', 'OB Rank 5', 'OB Rank 10', 'OB Rank 20', 'OB Rank 50', 'OB Rank 50', 'Input Bias'], kind='bar')
-    # plt.xticks([])
-    # plt.title(f'Average search results')
-    # plt.ylabel('Ease of Reading')
-    # plt.xlabel('Top N Results')
-    # plt.show()
+    data_by_feature = df[:][df['INL'] == feature]
 
     data_by_feature.index = data_by_feature['topic']
     data_by_feature.plot.barh(y=['OB Rank 10', 'OB Rank 20', 'Input Bias'])
-    # plt.title(f'{feature}'+' search results by query')
-    plt.title(f'Ease of Reading search results by query')
+    plt.title(f'Ease of Reading output bias for rank N by query')
     plt.xlabel('Ease of Reading')
     plt.ylabel('Query')
     plt.legend(loc='upper center', bbox_to_anchor=(1.0, 0.5), shadow=True, ncol=1)
+    plt.show()
+
+
+def plot_average_output_bias(df, feature):
+    """
+
+    :param df:
+    :return:
+    """
+    data_by_feature = df[:][df['INL'] == feature]
+
+    data = [{'INL': data_by_feature['INL'][0],
+             'OB Rank 3': data_by_feature['OB Rank 3'].mean(skipna=True),
+             'OB Rank 5': data_by_feature['OB Rank 5'].mean(skipna=True),
+             'OB Rank 10': data_by_feature['OB Rank 10'].mean(skipna=True),
+             'OB Rank 20': data_by_feature['OB Rank 20'].mean(skipna=True),
+             'OB Rank 50': data_by_feature['OB Rank 50'].mean(skipna=True),
+             'Input Bias': data_by_feature['Input Bias'].mean(skipna=True)}]
+    avg_df = pd.DataFrame(data)
+
+    ax = avg_df.plot(x='INL', y=['OB Rank 3', 'OB Rank 5', 'OB Rank 10', 'OB Rank 20', 'OB Rank 50', 'Input Bias'], kind='bar')
+    plt.xticks([])
+    plt.title(f'Average Output Bias Results')
+    plt.ylabel('Ease of Reading')
+    plt.xlabel('Output Bias for Rank N')
+    plt.show()
+
+    plot_ranking_bias(avg_df)
+
+
+def plot_ranking_bias(df):
+    """
+    Calculate ranking bias: RB(q, r) =OB(q, r)−IB(q) for each rank (3, 5, 10, 20, 50).
+    :param df:
+    :param feature:
+    :return:
+    """
+    df['INL'][0] = df['INL'][0].capitalize()
+    df['Ranking Bias R3'] = df['OB Rank 3'] - df['Input Bias']
+    df['Ranking Bias R5'] = df['OB Rank 5'] - df['Input Bias']
+    df['Ranking Bias R10'] = df['OB Rank 10'] - df['Input Bias']
+    df['Ranking Bias R20'] = df['OB Rank 20'] - df['Input Bias']
+    df['Ranking Bias R50'] = df['OB Rank 50'] - df['Input Bias']
+    ax = df.plot(x='INL', y=['Ranking Bias R3', 'Ranking Bias R5', 'Ranking Bias R10', 'Ranking Bias R20', 'Ranking Bias R50'],
+                     kind='bar')
+    feature = df['INL'][0]
+    plt.xticks([])
+    plt.title(f'{feature} Ranking Bias Results')
+    plt.ylabel(f'{feature} Ranking Bias')
+    plt.xlabel('Ranking Bias for Rank N')
     plt.show()
 
 
@@ -174,9 +218,8 @@ if __name__ == '__main__':
     # Create dataframe containing output bias per topic
     results = data_poli.append(data_econ, ignore_index=True)
 
-    # for one feature...
-    output_bias_df = get_output_bias(results, 'readability')
-    plot_output_bias(output_bias_df)
+    output_bias_econ = pd.DataFrame()
+    output_bias_poli = pd.DataFrame()
 
     # Create Dataframe containing search result averages
     for data in data_list:
@@ -185,15 +228,28 @@ if __name__ == '__main__':
             # create_scatter_plots(topic_data, features)
             # create_scatter_plots(topic_data, ['readability'])
             if data is data_poli:
+                output_bias_poli = output_bias_poli.append(get_output_bias(topic_data, features, output_bias_poli))
                 results_poli = get_output_averages(topic_data, features, results_poli)
             else:
+                output_bias_econ = output_bias_econ.append(get_output_bias(topic_data, features, output_bias_econ))
                 results_econ = get_output_averages(topic_data, features, results_econ)
 
-    results_poli['topic'] = results_poli['topic'].apply(reformat_topics)
-    results_econ['topic'] = results_econ['topic'].apply(reformat_topics)
+    output_bias_poli['topic'] = output_bias_poli['topic'].apply(reformat_topics)
+    output_bias_econ['topic'] = output_bias_econ['topic'].apply(reformat_topics)
+    plot_output_bias_by_query(output_bias_poli, 'readability')
+    plot_output_bias_by_query(output_bias_econ, 'readability')
+
+    output_bias = output_bias_econ.append(output_bias_poli, ignore_index=True)
+    plot_average_output_bias(output_bias, 'readability')
+
+    # plot_ranking_bias(output_bias, 'readability')
+
+    # results_poli['topic'] = results_poli['topic'].apply(reformat_topics)
+    # results_econ['topic'] = results_econ['topic'].apply(reformat_topics)
     # plot_top1_input(results_poli, 'readability')
     # plot_top1_input(results_econ, 'readability')
     #
     # average_results = results_econ.append(results_poli, ignore_index=True)
     # plot_topN_averages(average_results, 'readability')
+
 

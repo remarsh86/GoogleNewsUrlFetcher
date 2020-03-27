@@ -31,14 +31,25 @@ def get_output_bias(topic_df, features, output_bias_df):
         for j in [3, 5, 10, 20, 50]:
             output_bias = 0
             i = 1
+            count = 0
             while i <= j:
-                bias = topic_df['readability'][topic_df['rank'] <= i].mean(skipna=True)
+                # todo: check whether [topic_df['rank'] == i] exists
+                # topic_df[INL][topic_df['rank'] <= 3]
+
+                # topic_df[['rank', 'readability']][topic_df['rank'] <= 3]
+                # if i in topic_df[INL][topic_df['rank'] <= 3]
+                bias = topic_df[INL][topic_df['rank'] <= i].mean(skipna=True)
                 if bias is not np.nan:
                     output_bias = output_bias + bias
+                    count = count + 1
                 i = i + 1
-            output_bias_dict['OB Rank '+str(j)] = output_bias/j
+            # output_bias_dict['OB Rank '+str(j)] = output_bias/j
+            if count != 0:
+                output_bias_dict['OB Rank ' + str(j)] = output_bias / count
+            else:
+                output_bias_dict['OB Rank ' + str(j)] = np.nan
 
-        output_bias_dict['Input Bias'] = topic_df['readability'].mean(skipna=True)
+        output_bias_dict['Input Bias'] = topic_df[INL].mean(skipna=True)
 
         # Append row to output bias dataframe
         df_temp = pd.DataFrame([output_bias_dict])
@@ -60,7 +71,7 @@ def get_output_averages(topic_dataframe, feature, df):
     """
     topic_dataframe.reset_index(drop=True, inplace=True)
     for INL in feature:
-        top_1 = topic_dataframe[INL][0]
+        top_1 = topic_dataframe[INL][topic_dataframe['rank'] == 1]
         # print(f'Input bias of {INL} in {topic}: {topic_dataframe[INL].mean(skipna=True)}')
         input_bias = topic_dataframe[INL].mean(skipna=True)
         top_3 = topic_dataframe[INL][topic_dataframe['rank'] <= 3].mean(skipna=True)
@@ -91,7 +102,7 @@ def plot_top1_input(df, feature):
     data_by_feature = df[:][df['INL'] == feature]
 
     data_by_feature.index = data_by_feature['topic']
-    data_by_feature.plot.barh(y=['Top 1', 'Top 10', 'Input'])
+    data_by_feature.plot.barh(y=['Top 3','Top 10','Input'])
     # plt.title(f'{feature}'+' search results by query')
     plt.title(f'Ease of Reading search results by query')
     plt.xlabel('Ease of Reading')
@@ -242,14 +253,13 @@ if __name__ == '__main__':
     output_bias = output_bias_econ.append(output_bias_poli, ignore_index=True)
     plot_average_output_bias(output_bias, 'readability')
 
-    # plot_ranking_bias(output_bias, 'readability')
+    results_poli['topic'] = results_poli['topic'].apply(reformat_topics)
+    results_econ['topic'] = results_econ['topic'].apply(reformat_topics)
+    plot_top1_input(results_poli, 'readability')
+    plot_top1_input(results_econ, 'readability')
 
-    # results_poli['topic'] = results_poli['topic'].apply(reformat_topics)
-    # results_econ['topic'] = results_econ['topic'].apply(reformat_topics)
-    # plot_top1_input(results_poli, 'readability')
-    # plot_top1_input(results_econ, 'readability')
-    #
-    # average_results = results_econ.append(results_poli, ignore_index=True)
-    # plot_topN_averages(average_results, 'readability')
+    average_results = results_econ.append(results_poli, ignore_index=True)
+    plot_topN_averages(average_results, 'readability')
 
-
+    # for testing in excel
+    # results[['rank', 'topic', 'readability']][results['rank']<=3].to_excel(r'top3results.xlsx', index=False)

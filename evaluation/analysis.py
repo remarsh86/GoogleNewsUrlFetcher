@@ -33,11 +33,13 @@ def get_output_bias(topic_df, features, output_bias_df):
             i = 1
             count = 0
             while i <= j:
-                # todo: check whether [topic_df['rank'] == i] exists
-                # topic_df[INL][topic_df['rank'] <= 3]
-
-                # topic_df[['rank', 'readability']][topic_df['rank'] <= 3]
-                # if i in topic_df[INL][topic_df['rank'] <= 3]
+                # todo: fix bug
+                # if i in topic_df['rank']:
+                #     bias = topic_df[INL][topic_df['rank'] <= i].mean(skipna=True)
+                #     if bias is not np.nan:
+                #         output_bias = output_bias + bias
+                #         count = count + 1
+                # i = i + 1
                 bias = topic_df[INL][topic_df['rank'] <= i].mean(skipna=True)
                 if bias is not np.nan:
                     output_bias = output_bias + bias

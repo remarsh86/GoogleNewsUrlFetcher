@@ -73,7 +73,10 @@ def get_output_averages(topic_dataframe, feature, df):
     """
     topic_dataframe.reset_index(drop=True, inplace=True)
     for INL in feature:
-        top_1 = topic_dataframe[INL][topic_dataframe['rank'] == 1]
+        # todo: get first item if rank = 1
+        if topic_dataframe[INL][topic_dataframe['rank'] == 1] is not None:
+            # top_1 = topic_dataframe[INL][topic_dataframe['rank'] == 1][0]
+            top_1 = topic_dataframe[INL][0]
         # print(f'Input bias of {INL} in {topic}: {topic_dataframe[INL].mean(skipna=True)}')
         input_bias = topic_dataframe[INL].mean(skipna=True)
         top_3 = topic_dataframe[INL][topic_dataframe['rank'] <= 3].mean(skipna=True)
@@ -104,7 +107,7 @@ def plot_top1_input(df, feature):
     data_by_feature = df[:][df['INL'] == feature]
 
     data_by_feature.index = data_by_feature['topic']
-    data_by_feature.plot.barh(y=['Top 3','Top 10','Input'])
+    data_by_feature.plot.barh(y=['Top 1','Top 3','Top 10','Input'])
     # plt.title(f'{feature}'+' search results by query')
     plt.title(f'Ease of Reading search results by query')
     plt.xlabel('Ease of Reading')

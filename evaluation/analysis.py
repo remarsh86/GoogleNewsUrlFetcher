@@ -7,6 +7,12 @@ import re
 
 
 def create_scatter_plots(topic_data, features):
+    """
+    Plots results for the search results (from all 100 results) for one query.
+    :param topic_data:
+    :param features:
+    :return: None
+    """
     # todo: Add regression line
     # todo: Add title for topic_data
     for feature in features:
@@ -20,6 +26,13 @@ def create_scatter_plots(topic_data, features):
 def get_output_bias(topic_df, features, output_bias_df):
     """
     Calculate output bias for top 3, 5, 10, 20 , 50 results per topic and return dataframe
+
+    When calculated output bias, it's important to consider that some ranked documents could not be evaluated by newscan.
+    Therefore, for output bias rank 3, there may only be two documents in this category.  The output bias calculation
+    had to be adjusted to account for this.  In the loop, there may be less than j bias scores so divide by count
+    (which counts bias score) instead.  Also, bias scores (the mean of the documents to rank i) should not be calculated
+    for an i that is not in the ranking.  Example: ranking = [1, 3].  I.e. Document with rank 2 could not be evaluated by
+    NewsScan.  So the output bias is (b_1 + mean(b_1, b_2))/2, where b_i is the bias score of the document at rank i.
     :param df: data of all INL scores
     :param feature: one INL feature
     :return: dataframe of output_bias_df
@@ -33,20 +46,14 @@ def get_output_bias(topic_df, features, output_bias_df):
             i = 1
             count = 0
             while i <= j:
-                # todo: fix bug
-                # if i in topic_df['rank']:
-                #     bias = topic_df[INL][topic_df['rank'] <= i].mean(skipna=True)
-                #     if bias is not np.nan:
-                #         output_bias = output_bias + bias
-                #         count = count + 1
-                # i = i + 1
-                bias = topic_df[INL][topic_df['rank'] <= i].mean(skipna=True)
-                if bias is not np.nan:
-                    output_bias = output_bias + bias
-                    count = count + 1
+                if i in topic_df['rank'][topic_df['rank'] <= j].values:
+                    bias = topic_df[INL][topic_df['rank'] <= i].mean(skipna=True)
+                    if bias is not np.nan:
+                        output_bias = output_bias + bias
+                        count = count + 1
                 i = i + 1
-            # output_bias_dict['OB Rank '+str(j)] = output_bias/j
             if count != 0:
+                # There may be less than j bias scores so divide by count (which counts bias score) instead.
                 output_bias_dict['OB Rank ' + str(j)] = output_bias / count
             else:
                 output_bias_dict['OB Rank ' + str(j)] = np.nan
@@ -107,7 +114,7 @@ def plot_top1_input(df, feature):
     data_by_feature = df[:][df['INL'] == feature]
 
     data_by_feature.index = data_by_feature['topic']
-    data_by_feature.plot.barh(y=['Top 1','Top 3','Top 10','Input'])
+    data_by_feature.plot.barh(y=['Top 1','Input'])
     # plt.title(f'{feature}'+' search results by query')
     plt.title(f'Ease of Reading search results by query')
     plt.xlabel('Ease of Reading')

@@ -1,0 +1,8 @@
+rank,topic,url,readability,sentence_level_sentiment,positive_sentiment,negative_sentiment,sentence_level_objectivity,bias_score,bias_label,credibility,trust_metric,google_page_rank,alexa_reach_rank,domain
+1,RefugeeCrisis,https://www.bbc.co.uk/news/av/world-51286433/venezuela-crisis-forced-jos-abroad-to-access-hiv-drugs,100.0,12.45,9.375,3.0729166666666665,77.92,100,Left,95.0,96.0,9,102.0,bbc.co.uk
+2,RefugeeCrisis,https://earther.gizmodo.com/climate-threats-are-grounds-for-seeking-asylum-un-body-1841132046,40.0,8.05,5.482251082251082,2.5661111111111112,73.75,100,Left,75.0,60.0,8,529.0,earther.gizmodo.com
+3,RefugeeCrisis,https://www.bbc.co.uk/news/world-australia-51202534,40.0,17.38,11.804653679653681,5.576073232323232,68.8,50,Partially Right,95.0,96.0,9,102.0,bbc.co.uk
+4,RefugeeCrisis,https://news.yahoo.com/turkish-delegation-visit-russia-talks-104337771.html,40.0,9.42,5.689634439634439,3.726851851851851,71.17,50,Partially Right,87.5,95.0,8,8.0,news.yahoo.com
+5,RefugeeCrisis,https://www.bbc.co.uk/news/world-africa-51183521,40.0,14.78,8.384841057635175,6.39501633986928,67.84,50,Partially Right,95.0,96.0,9,102.0,bbc.co.uk
+6,RefugeeCrisis,https://www.reuters.com/article/us-myanmar-rohingya-china-insight-idUSKBN1ZJ0SY,80.0,13.77,9.309724997224999,4.460307632182632,67.6,50,Partially Left,100.0,87.0,9,544.0,reuters.com
+7,RefugeeCrisis,https://news.yahoo.com/cold-humiliated-syrians-displaced-yet-173321396.html,80.0,9.97,4.438683712121212,5.535274621212121,70.82,50,Partially Left,87.5,95.0,8,8.0,news.yahoo.com

@@ -227,6 +227,8 @@ def reformat_topics(str):
 
 
 if __name__ == '__main__':
+    # data_check = pd.read_csv(os.path.join(config.get_app_root(), "evaluation", 'politics_topics_2.csv'))
+
     data_poli = pd.read_csv(os.path.join(config.get_app_root(), "evaluation", 'politics_topics.csv'))
     data_econ = pd.read_csv(os.path.join(config.get_app_root(), "evaluation", 'economics_topics.csv'))
 

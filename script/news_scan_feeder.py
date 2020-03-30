@@ -59,11 +59,21 @@ def feed_news_scan():
 
 
 def create_score_file(category):
-    with open(os.path.join(config.get_app_root(), 'evaluation', category + '.csv'), 'a+', newline='') as csv_file:
+    """
+    Create file in package evaluation with the file name politics_topics_2.csv or economics_topics_2.csv and write
+    NewsScan results (one list per evaluated news article).
+    :param category: politics or economics
+    :return:
+    """
+    with open(os.path.join(config.get_app_root(), 'evaluation', category + '_2.csv'), 'a+', newline='') as csv_file:
         writer = csv.writer(csv_file)
+        # writer.writerow(
+            # ["rank", "topic", "url", "readability", "sentence_level_sentiment", "sentence_level_objectivity", "bias",
+            #  "credibility", "trust_metric", "google_page_rank", "alexa_reach_rank"])
         writer.writerow(
-            ["rank", "topic", "url", "readability", "sentence_level_sentiment", "sentence_level_objectivity", "bias",
-             "credibility", "trust_metric", "google_page_rank", "alexa_reach_rank"])
+            ['rank', 'topic', 'url', 'readability', 'sentence_level_sentiment', 'positive_sentiment', 'negative_sentiment',
+             'sentence_level_objectivity', 'bias_score', 'bias_label', 'credibility', 'trust_metric', 'google_page_rank',
+             'alexa_reach_rank', 'domain'])
 
 
 def call_news_scan(url):
@@ -97,9 +107,7 @@ def parse_json(j, category, topic, rank):
     :param rank: Will be written into csv for use in plotting.
     :return:
     """
-    # todo: Add feature "credibility": "domain" for domain analysis
-
-    with open(os.path.join(config.get_app_root(), 'evaluation', category + '.csv'), 'a+', newline='') as csv_file:
+    with open(os.path.join(config.get_app_root(), 'evaluation', category + '_2.csv'), 'a+', newline='') as csv_file:
         if j['url'] is not None:
             url = j['url']
 
@@ -114,6 +122,23 @@ def parse_json(j, category, topic, rank):
             else:
                 sentence_level_sentiment = np.nan
 
+            if j.get('nutrition').get('sentence_level_sentiment').get('subfeatures') is not None:
+                sentiment_list = []
+                for item in j.get('nutrition').get('sentence_level_sentiment').get('subfeatures'):
+                    if item['name'] == 'Positive sentiment':
+                        positive_sentiment = item['value']
+                        sentiment_list.append('positive sentiment')
+                    elif item['name'] == 'Negative sentiment':
+                        negative_sentiment = item['value']
+                        sentiment_list.append('negative sentiment')
+                if 'positive sentiment' not in sentiment_list:
+                    positive_sentiment = "No Data"
+                if 'negative sentiment' not in sentiment_list:
+                    negative_sentiment = "No Data"
+            else:
+                positive_sentiment = "No Data"
+                negative_sentiment = "No Data"
+
             if j.get('nutrition').get('sentence_level_objectivity').get('main_score') is not None:
                 sentence_level_objectivity = round(
                     j.get('nutrition').get('sentence_level_objectivity').get('main_score'), 2)
@@ -125,7 +150,6 @@ def parse_json(j, category, topic, rank):
             else:
                 bias_score = np.nan
 
-            # todo: Change News_scan_feeder to include bias label 'right', 'left', 'center', 'partialy left', ...
             if j.get('nutrition').get('political bias').get('subfeatures')[0].get('name') is not None:
                 bias_label = j.get('nutrition').get('political bias').get('subfeatures')[0].get('name')
             else:
@@ -151,14 +175,23 @@ def parse_json(j, category, topic, rank):
             else:
                 alexa_reach_rank = np.nan
 
-            print(readability, sentence_level_sentiment, sentence_level_objectivity, bias_score, bias_label, credibility,
-                  trust_metric, google_page_rank, alexa_reach_rank)
+            if j.get('nutrition').get('credibility').get('domain') is not None:
+                domain = j.get('nutrition').get('credibility').get('domain').strip()
+            else:
+                domain = "No Data"
+
+            print(readability, sentence_level_sentiment, positive_sentiment, negative_sentiment,
+                  sentence_level_objectivity, bias_score, bias_label, credibility, trust_metric, google_page_rank,
+                  alexa_reach_rank, domain)
 
             # Write variables to csv_file
-            # writer = csv.writer(csv_file)
+            writer = csv.writer(csv_file)
             # writer.writerow([rank, topic, url, readability, sentence_level_sentiment, sentence_level_objectivity,
             #                   bias_score, credibility, trust_metric, google_page_rank, alexa_reach_rank])
 
+            writer.writerow([rank, topic, url, readability, sentence_level_sentiment, positive_sentiment, negative_sentiment,
+                              sentence_level_objectivity, bias_score, bias_label, credibility, trust_metric, google_page_rank,
+                              alexa_reach_rank, domain])
 
 if __name__ == '__main__':
     feed_news_scan()

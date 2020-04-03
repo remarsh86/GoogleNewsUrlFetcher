@@ -72,7 +72,7 @@ def create_score_file(category):
             #  "credibility", "trust_metric", "google_page_rank", "alexa_reach_rank"])
         writer.writerow(
             ['rank', 'topic', 'url', 'readability', 'sentence_level_sentiment', 'positive_sentiment', 'negative_sentiment',
-             'sentence_level_objectivity', 'bias_score', 'bias_label', 'credibility', 'trust_metric', 'google_page_rank',
+             'sentence_level_objectivity', 'bias', 'bias_label', 'credibility', 'trust_metric', 'google_page_rank',
              'alexa_reach_rank', 'domain'])
 
 
@@ -146,9 +146,9 @@ def parse_json(j, category, topic, rank):
                 sentence_level_objectivity = np.nan
 
             if j.get('nutrition').get('political bias').get('main_score') is not None:
-                bias_score = round(j.get('nutrition').get('political bias').get('main_score'), 2)
+                bias = round(j.get('nutrition').get('political bias').get('main_score'), 2)
             else:
-                bias_score = np.nan
+                bias = np.nan
 
             if j.get('nutrition').get('political bias').get('subfeatures')[0].get('name') is not None:
                 bias_label = j.get('nutrition').get('political bias').get('subfeatures')[0].get('name')
@@ -181,7 +181,7 @@ def parse_json(j, category, topic, rank):
                 domain = "No Data"
 
             print(readability, sentence_level_sentiment, positive_sentiment, negative_sentiment,
-                  sentence_level_objectivity, bias_score, bias_label, credibility, trust_metric, google_page_rank,
+                  sentence_level_objectivity, bias, bias_label, credibility, trust_metric, google_page_rank,
                   alexa_reach_rank, domain)
 
             # Write variables to csv_file
@@ -190,7 +190,7 @@ def parse_json(j, category, topic, rank):
             #                   bias_score, credibility, trust_metric, google_page_rank, alexa_reach_rank])
 
             writer.writerow([rank, topic, url, readability, sentence_level_sentiment, positive_sentiment, negative_sentiment,
-                              sentence_level_objectivity, bias_score, bias_label, credibility, trust_metric, google_page_rank,
+                              sentence_level_objectivity, bias, bias_label, credibility, trust_metric, google_page_rank,
                               alexa_reach_rank, domain])
 
 if __name__ == '__main__':

@@ -4,6 +4,8 @@
     <list default="true" id="7bc1d36e-6f79-489c-b5d5-59390989138e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evaluation/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/politics_topics_2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/script/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/news_scan_feeder.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/news_scan_feeder.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="231" selection-start-line="231" selection-end-line="231" />
+            <state relative-caret-position="360">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -27,15 +29,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/evaluation/politics_topics_2.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/news_scan_feeder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-943">
-              <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+            <state relative-caret-position="-337">
+              <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -73,10 +70,14 @@
       <find>Divestmen</find>
       <find>Brexi</find>
       <find>reuters</find>
+      <find>Disarmamen,</find>
+      <find>Divestmen,</find>
     </findStrings>
     <replaceStrings>
       <replace>Divestment</replace>
       <replace>Brexit,</replace>
+      <replace>Disarmament,</replace>
+      <replace>Divestment,</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -95,14 +96,17 @@
         <option value="$PROJECT_DIR$/evaluation/economics_topics.csv" />
         <option value="$PROJECT_DIR$/evaluation/politics_topics.csv" />
         <option value="$PROJECT_DIR$/script/news_scan_feeder.py" />
+        <option value="$PROJECT_DIR$/evaluation/politics_topics_2.csv" />
+        <option value="$PROJECT_DIR$/evaluation/economics_topics_2.csv" />
         <option value="$PROJECT_DIR$/evaluation/analysis.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1415" />
-    <option name="height" value="797" />
+    <option name="x" value="-247" />
+    <option name="y" value="-1057" />
+    <option name="width" value="1869" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -270,23 +274,24 @@
       <workItem from="1580989678062" duration="7072000" />
       <workItem from="1581505878398" duration="100007000" />
       <workItem from="1585216733458" duration="27883000" />
-      <workItem from="1585569573709" duration="4400000" />
+      <workItem from="1585569573709" duration="9418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154301000" />
+    <option name="totallyTimeSpent" value="159319000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1415" height="797" extended-state="0" />
+    <frame x="-247" y="-1057" width="1869" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.757085" visible="true" weight="0.20684633" />
-      <window_info id="Structure" order="1" sideWeight="0.24291497" side_tool="true" visible="true" weight="0.20684633" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7573657" weight="0.15544608" />
+      <window_info id="Structure" order="1" sideWeight="0.24263431" side_tool="true" weight="0.15544608" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" weight="0.3253389" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" weight="0.37021276" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" visible="true" weight="0.29929078" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" weight="0.32460734" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" weight="0.31413612" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" visible="true" weight="0.39581153" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -294,35 +299,35 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.34375" side_tool="true" weight="0.3220339" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733758" weight="0.04255319" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733758" weight="0.40851063" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49928468" weight="0.32765958" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.62855065" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.34099618" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15350877" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7573657" visible="true" weight="0.15544608" />
+      <window_info id="Structure" order="1" sideWeight="0.24263431" side_tool="true" visible="true" weight="0.15544608" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" weight="0.3257024" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" visible="true" weight="0.3220339" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" weight="0.5683616" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" weight="0.32460734" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" weight="0.31413612" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" visible="true" weight="0.39581153" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.34375" side_tool="true" visible="true" weight="0.3220339" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733758" weight="0.280226" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49928468" weight="0.32881355" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.34375" side_tool="true" weight="0.3220339" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733758" weight="0.40851063" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49928468" weight="0.32765958" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.31195176" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.34099618" />
       <window_info anchor="right" id="Database" order="4" />
     </layout-to-restore>
   </component>
@@ -334,24 +339,39 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/evaluation/analysis.py</url>
-          <line>209</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/evaluation/analysis.py</url>
-          <line>229</line>
-          <option name="timeStamp" value="66" />
+          <line>244</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/URL_fetcher$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1585577596368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
+    <SUITE FILE_PATH="coverage/URL_fetcher$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1585913317560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
     <SUITE FILE_PATH="coverage/URL_fetcher$url_fetcher.coverage" NAME="url_fetcher Coverage Results" MODIFIED="1581950358093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
-    <SUITE FILE_PATH="coverage/URL_fetcher$news_scan_feeder.coverage" NAME="news_scan_feeder Coverage Results" MODIFIED="1585577538947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
+    <SUITE FILE_PATH="coverage/URL_fetcher$news_scan_feeder.coverage" NAME="news_scan_feeder Coverage Results" MODIFIED="1585859612112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>data = [{'INL': data_by_feature['INL'][0], 'OB Rank 3': data_by_feature['OB Rank 3'].mean(skipna=True),
+         'OB Rank 5': data_by_feature['OB Rank 5'].mean(skipna=True),
+         'OB Rank 10': data_by_feature['OB Rank 10'].mean(skipna=True),
+         'OB Rank 20': data_by_feature['OB Rank 20'].mean(skipna=True),
+         'OB Rank 50': data_by_feature['OB Rank 50'].mean(skipna=True),
+         'Input Bias': data_by_feature['Input Bias'].mean(skipna=True)}]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>average_results</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>data_by_feature = average_results[:][average_results['INL'] == 'readability']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>df</expression-string>
         <language-id>Python</language-id>
@@ -382,36 +402,9 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>1 is in topic_df['rank']</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>topic_df['rank'].isin(1)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>topic_df['rank'].isin([1])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>'1' in topic_df['rank']</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/urls/politics_topics/Immigration.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-980">
-          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urls/politics_topics/SanctionsAgainstIran.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1025" />
@@ -689,20 +682,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/news_scan_feeder.py">
+    <entry file="file://$PROJECT_DIR$/evaluation/politics_topics_2.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-943">
-          <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+        <state relative-caret-position="1706">
+          <caret line="589" column="16" selection-start-line="589" selection-start-column="16" selection-end-line="589" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation/politics_topics_2.csv">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/evaluation/economics_topics_2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1691">
+          <caret line="1551" column="25" selection-start-line="1551" selection-start-column="25" selection-end-line="1551" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/news_scan_feeder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-337">
+          <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="231" selection-start-line="231" selection-end-line="231" />
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

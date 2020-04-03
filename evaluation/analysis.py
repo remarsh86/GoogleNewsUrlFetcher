@@ -23,6 +23,10 @@ def create_scatter_plots(topic_data, features):
         plt.show()
 
 
+def create_feature_scatterplot(feature, results):
+    pass
+
+
 def get_output_bias(topic_df, features, output_bias_df):
     """
     Calculate output bias for top 3, 5, 10, 20 , 50 results per topic and return dataframe
@@ -80,9 +84,7 @@ def get_output_averages(topic_dataframe, feature, df):
     """
     topic_dataframe.reset_index(drop=True, inplace=True)
     for INL in feature:
-        # todo: get first item if rank = 1
         if topic_dataframe[INL][topic_dataframe['rank'] == 1] is not None:
-            # top_1 = topic_dataframe[INL][topic_dataframe['rank'] == 1][0]
             top_1 = topic_dataframe[INL][0]
         # print(f'Input bias of {INL} in {topic}: {topic_dataframe[INL].mean(skipna=True)}')
         input_bias = topic_dataframe[INL].mean(skipna=True)
@@ -93,10 +95,10 @@ def get_output_averages(topic_dataframe, feature, df):
         top_50 = topic_dataframe[INL][topic_dataframe['rank'] <= 50].mean(skipna=True)
 
         row_data = [{'topic': topic_dataframe['topic'][0], 'INL': INL, 'Top 1': top_1, 'Top 3': top_3, 'Top 5': top_5,
-                     'Top 10': top_10,'Top 20': top_20, 'Top 50': top_50, 'Input': input_bias}]
+                     'Top 10': top_10,'Top 20': top_20, 'Top 50': top_50, 'Input Bias': input_bias}]
         df_temp = pd.DataFrame(row_data)
         df_temp = df_temp.reindex(columns=['topic', 'INL', 'Top 1', 'Top 3', 'Top 5', 'Top 10', 'Top 20', 'Top 50',
-                                           'Input'])
+                                           'Input Bias'])
         df = df.append(df_temp, ignore_index=True)
     return df
 
@@ -114,7 +116,7 @@ def plot_top1_input(df, feature):
     data_by_feature = df[:][df['INL'] == feature]
 
     data_by_feature.index = data_by_feature['topic']
-    data_by_feature.plot.barh(y=['Top 1','Input'])
+    data_by_feature.plot.barh(y=['Top 1','Input Bias'])
     # plt.title(f'{feature}'+' search results by query')
     plt.title(f'Ease of Reading search results by query')
     plt.xlabel('Ease of Reading')
@@ -139,10 +141,10 @@ def plot_topN_averages(df, feature):
              'Top 10': data_by_feature['Top 10'].mean(skipna=True),
              'Top 20': data_by_feature['Top 20'].mean(skipna=True),
              'Top 50': data_by_feature['Top 50'].mean(skipna=True),
-             'Input': data_by_feature['Input'].mean(skipna=True)}]
+             'Input Bias': data_by_feature['Input Bias'].mean(skipna=True)}]
     avg_df = pd.DataFrame(data)
 
-    ax = avg_df.plot(x='INL', y=['Top 1', 'Top 3', 'Top 5', 'Top 10', 'Top 20', 'Top 50', 'Input'], kind='bar')
+    ax = avg_df.plot(x='INL', y=['Top 1', 'Top 3', 'Top 5', 'Top 10', 'Top 20', 'Top 50', 'Input Bias'], kind='bar')
     plt.xticks([])
     plt.title(f'Average search results')
     plt.ylabel('Ease of Reading')
@@ -229,8 +231,8 @@ def reformat_topics(str):
 if __name__ == '__main__':
     # data_check = pd.read_csv(os.path.join(config.get_app_root(), "evaluation", 'politics_topics_2.csv'))
 
-    data_poli = pd.read_csv(os.path.join(config.get_app_root(), "evaluation", 'politics_topics.csv'))
-    data_econ = pd.read_csv(os.path.join(config.get_app_root(), "evaluation", 'economics_topics.csv'))
+    data_poli = pd.read_csv(os.path.join(config.get_app_root(), "evaluation", 'politics_topics_2.csv'))
+    data_econ = pd.read_csv(os.path.join(config.get_app_root(), "evaluation", 'economics_topics_2.csv'))
 
     results_econ = pd.DataFrame({}, columns=['topic', 'INL', 'Top 1', 'Top 3', 'Top 5', 'Top 10', 'Top 20', 'Top 50',
                                              'Input'])
@@ -240,9 +242,12 @@ if __name__ == '__main__':
                 'trust_metric', 'google_page_rank', 'alexa_reach_rank']
     data_list = [data_poli, data_econ]
 
-    # Create dataframe containing output bias per topic
     results = data_poli.append(data_econ, ignore_index=True)
+    #Create Scatterplot for each feature containing all results
+    for feature in features:
+        create_feature_scatterplot(feature, results)
 
+    # Create dataframe containing output bias per topic
     output_bias_econ = pd.DataFrame()
     output_bias_poli = pd.DataFrame()
 

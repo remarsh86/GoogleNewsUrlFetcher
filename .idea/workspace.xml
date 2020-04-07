@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bc1d36e-6f79-489c-b5d5-59390989138e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/evaluation/readability_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evaluation/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation/politics_topics_2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/script/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/news_scan_feeder.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/news_scan_feeder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/economics_topics_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/economics_topics_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation/politics_topics_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/politics_topics_2.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,14 +16,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="248">
+              <caret line="329" selection-start-line="329" selection-end-line="329" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#190#2259#0" />
+                <element signature="e#661#1162#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/evaluation/readability_analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="56" selection-start-line="56" selection-end-line="60" selection-end-column="89" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/evaluation/politics_topics_2.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="30" selection-start-column="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/evaluation/economics_topics_2.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1">
+              <caret column="30" selection-start-column="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/evaluation/economics_topics.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2878">
+              <caret line="736" column="15" selection-start-line="736" selection-start-column="15" selection-end-line="736" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/seaborn/distributions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="214" selection-start-line="214" selection-end-line="214" />
             </state>
           </provider>
         </entry>
@@ -33,15 +83,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-337">
               <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/evaluation/politics_topics.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="1935" selection-start-line="1935" selection-end-line="1935" />
             </state>
           </provider>
         </entry>
@@ -72,6 +113,9 @@
       <find>reuters</find>
       <find>Disarmamen,</find>
       <find>Divestmen,</find>
+      <find>capita</find>
+      <find>capitalize</find>
+      <find>reform</find>
     </findStrings>
     <replaceStrings>
       <replace>Divestment</replace>
@@ -94,19 +138,21 @@
         <option value="$PROJECT_DIR$/scripts/news_scan_feeder.py" />
         <option value="$PROJECT_DIR$/script/url_fetcher.py" />
         <option value="$PROJECT_DIR$/evaluation/economics_topics.csv" />
-        <option value="$PROJECT_DIR$/evaluation/politics_topics.csv" />
         <option value="$PROJECT_DIR$/script/news_scan_feeder.py" />
+        <option value="$PROJECT_DIR$/evaluation/domain_analysis.py" />
+        <option value="$PROJECT_DIR$/evaluation/politics_topics.csv" />
         <option value="$PROJECT_DIR$/evaluation/politics_topics_2.csv" />
         <option value="$PROJECT_DIR$/evaluation/economics_topics_2.csv" />
         <option value="$PROJECT_DIR$/evaluation/analysis.py" />
+        <option value="$PROJECT_DIR$/evaluation/readability_analysis.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-247" />
-    <option name="y" value="-1057" />
-    <option name="width" value="1869" />
-    <option name="height" value="1047" />
+    <option name="x" value="-251" />
+    <option name="y" value="-1019" />
+    <option name="width" value="1900" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -136,17 +182,6 @@
               <item name="URL_fetcher" type="b2602c69:ProjectViewProjectNode" />
               <item name="URL_fetcher" type="462c0819:PsiDirectoryNode" />
               <item name="script" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="URL_fetcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="URL_fetcher" type="462c0819:PsiDirectoryNode" />
-              <item name="urls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="URL_fetcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="URL_fetcher" type="462c0819:PsiDirectoryNode" />
-              <item name="urls" type="462c0819:PsiDirectoryNode" />
-              <item name="politics_topics" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -184,7 +219,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.analysis">
+  <component name="RunManager" selected="Python.domain_analysis">
     <configuration name="analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="URL_fetcher" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -199,6 +234,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluation/analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="domain_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="URL_fetcher" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/evaluation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluation/readability_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -253,6 +310,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.domain_analysis" />
         <item itemvalue="Python.analysis" />
         <item itemvalue="Python.news_scan_feeder" />
         <item itemvalue="Python.url_fetcher" />
@@ -274,24 +332,23 @@
       <workItem from="1580989678062" duration="7072000" />
       <workItem from="1581505878398" duration="100007000" />
       <workItem from="1585216733458" duration="27883000" />
-      <workItem from="1585569573709" duration="9418000" />
+      <workItem from="1585569573709" duration="54572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159319000" />
+    <option name="totallyTimeSpent" value="204473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-247" y="-1057" width="1869" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-251" y="-1019" width="1900" height="977" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7573657" weight="0.15544608" />
-      <window_info id="Structure" order="1" sideWeight="0.24263431" side_tool="true" weight="0.15544608" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.45659164" visible="true" weight="0.15285254" />
+      <window_info id="Structure" order="1" sideWeight="0.54340833" side_tool="true" visible="true" weight="0.15285254" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" weight="0.32460734" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" weight="0.31413612" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" visible="true" weight="0.39581153" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" weight="0.3242938" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" visible="true" weight="0.29717514" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" weight="0.3740113" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -299,12 +356,12 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.34375" side_tool="true" weight="0.3220339" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733758" weight="0.40851063" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49928468" weight="0.32765958" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733758" weight="0.22522523" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49928468" weight="0.32655367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.34099618" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.393972" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -339,89 +396,73 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/evaluation/analysis.py</url>
-          <line>244</line>
-          <option name="timeStamp" value="74" />
+          <line>303</line>
+          <option name="timeStamp" value="97" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/URL_fetcher$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1585913317560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
+    <SUITE FILE_PATH="coverage/URL_fetcher$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1586254518735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
+    <SUITE FILE_PATH="coverage/URL_fetcher$domain_analysis.coverage" NAME="domain_analysis Coverage Results" MODIFIED="1586273093837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
     <SUITE FILE_PATH="coverage/URL_fetcher$url_fetcher.coverage" NAME="url_fetcher Coverage Results" MODIFIED="1581950358093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/URL_fetcher$news_scan_feeder.coverage" NAME="news_scan_feeder Coverage Results" MODIFIED="1585859612112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>data = [{'INL': data_by_feature['INL'][0], 'OB Rank 3': data_by_feature['OB Rank 3'].mean(skipna=True),
-         'OB Rank 5': data_by_feature['OB Rank 5'].mean(skipna=True),
-         'OB Rank 10': data_by_feature['OB Rank 10'].mean(skipna=True),
-         'OB Rank 20': data_by_feature['OB Rank 20'].mean(skipna=True),
-         'OB Rank 50': data_by_feature['OB Rank 50'].mean(skipna=True),
-         'Input Bias': data_by_feature['Input Bias'].mean(skipna=True)}]</expression-string>
+        <expression-string>top_1[:][top_1['topic']==topic]['ease_of_reading'].iloc[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>average_results</expression-string>
+        <expression-string>top_1[:][top_1['topic']==topic]['ease_of_reading']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>data_by_feature = average_results[:][average_results['INL'] == 'readability']</expression-string>
+        <expression-string>top_1[:][top_1['topic']==topic].reindex()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df</expression-string>
+        <expression-string>top_1[:][top_1['topic']==topic].reindex</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>1 in topic_df['rank'].values</expression-string>
+        <expression-string>top_1[:][top_1['topic']==topic]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>topic_df['rank'].values</expression-string>
+        <expression-string>top_1[:][top_1['topic']==topic]['ease_of_reading'].shape</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>topic_df['rank']</expression-string>
+        <expression-string>d = top_1[:][top_1['topic']==topic]['ease_of_reading']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>[1] in topic_df['rank']</expression-string>
+        <expression-string>d = top_1[:][top_1['topic']==topic]['ease_of_reading'].reindex()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>1 in topic_df['rank']</expression-string>
+        <expression-string>top_1[:][top_1['topic']==topic]['ease_of_reading'].reindex()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>top_1[:][top_1['topic']==topic]['ease_of_reading'].reindex</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/urls/politics_topics/SanctionsAgainstIran.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1025" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/urls/politics_topics/SanctuaryCities.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1025" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/urls/economics_topics/BankingReform.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urls/politics_topics/YemenCivilWar.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1025" />
@@ -561,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urls/politics_topics/RefugeeCrisis.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-836">
@@ -658,13 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation/economics_topics.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="736" column="15" selection-start-line="736" selection-start-column="15" selection-end-line="736" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/url_fetcher.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -675,24 +702,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/statsmodels/nonparametric/kde.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="447" selection-start-line="447" selection-end-line="447" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/seaborn/distributions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation/economics_topics.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2878">
+          <caret line="736" column="15" selection-start-line="736" selection-start-column="15" selection-end-line="736" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/evaluation/politics_topics.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="1935" selection-start-line="1935" selection-end-line="1935" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation/politics_topics_2.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1706">
-          <caret line="589" column="16" selection-start-line="589" selection-start-column="16" selection-end-line="589" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation/economics_topics_2.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1691">
-          <caret line="1551" column="25" selection-start-line="1551" selection-start-column="25" selection-end-line="1551" selection-end-column="25" />
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -703,10 +737,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation/politics_topics_2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation/economics_topics_2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="248">
+          <caret line="329" selection-start-line="329" selection-end-line="329" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#190#2259#0" />
+            <element signature="e#661#1162#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation/readability_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="56" selection-start-line="56" selection-end-line="60" selection-end-column="89" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

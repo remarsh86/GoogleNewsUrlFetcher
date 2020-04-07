@@ -1,4 +1,4 @@
-rank,topic,url,readability,sentence_level_sentiment,positive_sentiment,negative_sentiment,sentence_level_objectivity,bias,bias_label,credibility,trust_metric,google_page_rank,alexa_reach_rank,domain
+rank,topic,url,ease_of_reading,sentence_level_sentiment,positive_sentiment,negative_sentiment,sentence_level_objectivity,bias,bias_label,credibility,trust_metric,google_page_rank,alexa_reach_rank,domain
 1,TradeTariffs,https://www.reuters.com/article/us-usa-trade-china-tariffs-idUSKBN2000C0,40.0,9.96,4.942821067821067,5.01984126984127,70.21,50,Partially Left,100.0,87.0,9,544.0,reuters.com
 2,TradeTariffs,https://www.bbc.co.uk/news/world-us-canada-51144239,80.0,13.98,8.77383751306165,5.204342273307791,64.4,100,Left,95.0,96.0,9,102.0,bbc.co.uk
 3,TradeTariffs,https://www.npr.org/2020/01/18/797311177/does-the-china-trade-deal-move-the-world-away-from-free-trade,100.0,6.92,0.4166666666666667,6.50297619047619,79.72,50,Partially Left,100.0,84.0,8,521.0,npr.org

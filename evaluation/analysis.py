@@ -124,6 +124,8 @@ def remove_queries(res):
     """
     top_1 = res[:][res['rank'] == 1]
     data = res[:][res['topic'].isin(top_1['topic'].values)]
+    print("selected topics ", top_1['topic'].values)
+    print("number of topics", len(top_1['topic'].values))
     return data
 
 

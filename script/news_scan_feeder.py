@@ -43,15 +43,17 @@ def feed_news_scan():
                 if '.txt' in filename:
                     rank = 0
                     with open(os.path.join(config.get_app_root(), 'urls', category, filename), 'r') as url_file:
-                        for url in url_file:
+                        for line in url_file:
+                            url = line.split(',')[0]
+                            content_length = int(line.split(',')[1].strip())
                             rank = rank + 1
                             print("filename: ", filename, " url: ", url, " rank: ", rank)
                             try:
                                 url = url.rstrip()
-                                topic = filename.rstrip('.txt')
+                                topic = filename.replace('.txt','').rstrip()
                                 # evaluate the URL using NewsScan
                                 json_object = call_news_scan(config.get_newsscan_api() + url)
-                                parse_json(json_object, category, topic, rank)
+                                parse_json(json_object, category, topic, rank, content_length)
                             except Exception as e:
                                 logging.warning(f'{url.rstrip()} Could not be called by NewsScan')
                                 print("Could not access ", url)
@@ -67,13 +69,10 @@ def create_score_file(category):
     """
     with open(os.path.join(config.get_app_root(), 'evaluation', category + '_2.csv'), 'a+', newline='') as csv_file:
         writer = csv.writer(csv_file)
-        # writer.writerow(
-            # ["rank", "topic", "url", "readability", "sentence_level_sentiment", "sentence_level_objectivity", "bias",
-            #  "credibility", "trust_metric", "google_page_rank", "alexa_reach_rank"])
         writer.writerow(
-            ['rank', 'topic', 'url', 'readability', 'sentence_level_sentiment', 'positive_sentiment', 'negative_sentiment',
+            ['rank', 'topic', 'url', 'ease_of_reading', 'sentence_level_sentiment', 'positive_sentiment', 'negative_sentiment',
              'sentence_level_objectivity', 'bias', 'bias_label', 'credibility', 'trust_metric', 'google_page_rank',
-             'alexa_reach_rank', 'domain'])
+             'alexa_reach_rank', 'domain', 'content_length'])
 
 
 def call_news_scan(url):
@@ -98,14 +97,14 @@ def call_news_scan(url):
         raise
 
 
-def parse_json(j, category, topic, rank):
+def parse_json(j, category, topic, rank, content_length):
     """
     Parse JSON Object (response from NewsScan) - j - and save critical information to the appropriate category csv file.
     :param j: Response in form of a json_object.
     :param category: Politics or Economics.  Needed for determining which csv to write to.
     :param topic: Will be written into csv for use in plotting.
     :param rank: Will be written into csv for use in plotting.
-    :return:
+    :param content_length: This is the length of the news article
     """
     with open(os.path.join(config.get_app_root(), 'evaluation', category + '_2.csv'), 'a+', newline='') as csv_file:
         if j['url'] is not None:
@@ -180,18 +179,15 @@ def parse_json(j, category, topic, rank):
             else:
                 domain = "No Data"
 
-            print(readability, sentence_level_sentiment, positive_sentiment, negative_sentiment,
+            print(rank, topic, url, readability, sentence_level_sentiment, positive_sentiment, negative_sentiment,
                   sentence_level_objectivity, bias, bias_label, credibility, trust_metric, google_page_rank,
-                  alexa_reach_rank, domain)
+                  alexa_reach_rank, domain, content_length)
 
-            # Write variables to csv_file
+            # # Write variables to csv_file
             writer = csv.writer(csv_file)
-            # writer.writerow([rank, topic, url, readability, sentence_level_sentiment, sentence_level_objectivity,
-            #                   bias_score, credibility, trust_metric, google_page_rank, alexa_reach_rank])
-
             writer.writerow([rank, topic, url, readability, sentence_level_sentiment, positive_sentiment, negative_sentiment,
                               sentence_level_objectivity, bias, bias_label, credibility, trust_metric, google_page_rank,
-                              alexa_reach_rank, domain])
+                              alexa_reach_rank, domain, content_length])
 
 if __name__ == '__main__':
     feed_news_scan()

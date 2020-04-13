@@ -6,8 +6,9 @@ import numpy as np
 import re
 from scipy.stats import ks_2samp
 
-FEATURE = 'ease_of_reading'
+# FEATURE = 'ease_of_reading'
 # FEATURE = 'content_length'
+FEATURE = 'bias_label'
 SMALL_SIZE = 8
 MEDIUM_SIZE = 10
 BIGGER_SIZE = 12
@@ -98,6 +99,31 @@ def get_output_averages(topic_dataframe, feature, df):
     return df
 
 
+def change_poli_labels(feature, df):
+    """
+    :param df: ..
+    :param feature: 'bias_label'
+    :return:
+    """
+    print(df.bias_label.unique())
+    df[feature] = df[feature].apply(convert_label)
+    print(df.bias_label.unique())
+    return df
+
+
+def convert_label(x):
+    if x == 'Left':
+        return -2
+    elif x == 'Partially Left':
+        return -1
+    elif x == 'Center':
+        return 0
+    elif x == 'Partially Right':
+        return 1
+    else:
+        return 2
+
+
 def get_distribution_df(feature, results, title):
     """
     This method is used to get data relevant for statistical parity statistics!
@@ -139,6 +165,10 @@ def get_distribution_df(feature, results, title):
 
     # Create dataframe of results
     df = pd.DataFrame(data)
+    if feature is 'bias_label':
+        df = df[['rank', -2, -1, 0, 1, 2]]
+        df = df.rename({-2: 'Far Left', -1: 'Left', 0: 'Center', 1: 'Right', 2: 'Far Right'}, axis='columns')
+
     print(df)
     return df
 
@@ -274,6 +304,9 @@ def create_feature_scatterplot(feature, results, title):
     if feature is 'content_length':
         plt.ylim((1, 50000))
         plt.xlim((1, 101))
+    elif feature is 'bias_label':
+        plt.xlim((1, 101))
+        plt.yticks([-2.0, -1.0, 0, 1.0, 2.0], [ 'Far Left', 'Left', 'Center', 'Right', 'Far Right'])
     else:
         plt.ylim((1, 101))
         plt.xlim((1, 101))
@@ -484,6 +517,10 @@ if __name__ == '__main__':
     data_poli = pd.read_csv(os.path.join(config.get_app_root(), "evaluation", 'politics_topics_2.csv'))
     data_econ = pd.read_csv(os.path.join(config.get_app_root(), "evaluation", 'economics_topics_2.csv'))
 
+    # Convert political bias labels to numeric labels
+    data_poli = change_poli_labels(FEATURE, data_poli)
+    data_econ = change_poli_labels(FEATURE, data_econ)
+
     # Remove queries without document at ranking 1
     data_poli = remove_queries(data_poli)
     data_econ = remove_queries(data_econ)
@@ -516,10 +553,4 @@ if __name__ == '__main__':
     plot_statistical_parity(FEATURE, stat_parity_df, 'for all Results')
     plot_disparate_impact(FEATURE, disparate_impact_df, 'for all Results')
 
-
-
-    # plot_disparate_impact(FEATURE, stat_parity_df, 'for all Results')
-
-    # for feature in features:
-    #     create_feature_scatterplot(feature, results, 'for all Results')
-    #
+    create_feature_scatterplot(FEATURE, results, 'for all Results')

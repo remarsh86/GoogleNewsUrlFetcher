@@ -143,12 +143,13 @@ def get_distribution_df(feature, results, title):
     return df
 
 
-def get_dist_percent_df(df_original):
+def get_dist_percent_df(feature, df_original):
     """
     Used to plot disparate impact statistics.  Get distributions as percentages to create a percent stacked chart.
     First create a new column containing the total number of documents per rank. Then, replace each column with its
     percentage at that rank instead of the raw number of documents represented by the respective class/level.
     :param df: output from function get_distribution_df()
+    :param feature: the INL feature (ex: ease_of_reading)
     :return:
     """
     df = df_original.copy()
@@ -164,11 +165,13 @@ def get_dist_percent_df(df_original):
             element = df[col].iloc[index]
             row_total = df['total'].iloc[index]
             if element != 0:
-                df[col].iloc[index] = round(element/row_total * 100, 2)
+                df[col].iloc[index] = round(element/row_total * 100, 1)
             else:
                 df[col].iloc[index] = 0
 
     df = df.drop(columns='total')
+    if feature is 'ease_of_reading':
+        df = df[['rank', 100.0, 80.0, 40.0, 20.0]]
     print(df)
     return df
 
@@ -445,7 +448,7 @@ def plot_statistical_parity(feature, df, title):
     label = feature.replace('_', ' ').title().replace('Of', 'of')
     df.set_index('rank', inplace=True)
     df.loc[:, df.columns].plot.bar(stacked=True, figsize=(10, 7))
-    plt.title(f'Statistical Partiy at Rank N for {label} {title}')
+    plt.title(f'Distribution of Documents at Rank N for {label} {title}')
     plt.ylabel(f'Number of Documents')
     plt.xlabel('Rank N')
     plt.show()
@@ -508,7 +511,7 @@ if __name__ == '__main__':
 
     # Get statistical parity and disparate impact stacked bar charts
     stat_parity_df = get_distribution_df(FEATURE, results, 'for all Results')
-    disparate_impact_df = get_dist_percent_df(stat_parity_df)
+    disparate_impact_df = get_dist_percent_df(FEATURE, stat_parity_df)
 
     plot_statistical_parity(FEATURE, stat_parity_df, 'for all Results')
     plot_disparate_impact(FEATURE, disparate_impact_df, 'for all Results')

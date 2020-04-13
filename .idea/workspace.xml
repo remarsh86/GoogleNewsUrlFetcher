@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bc1d36e-6f79-489c-b5d5-59390989138e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evaluation/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation/readability_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation/readability_analysis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="147" column="46" selection-start-line="147" selection-start-column="46" selection-end-line="147" selection-end-column="46" />
+            <state relative-caret-position="344">
+              <caret line="466" column="53" selection-start-line="466" selection-start-column="53" selection-end-line="466" selection-end-column="53" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -102,6 +100,7 @@
       <find>xticks</find>
       <find>C2</find>
       <find>pd.D</find>
+      <find>apply</find>
     </findStrings>
     <replaceStrings>
       <replace>Divestment</replace>
@@ -136,7 +135,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-232" />
+    <option name="x" value="-239" />
     <option name="y" value="-1057" />
     <option name="width" value="1860" />
     <option name="height" value="1057" />
@@ -335,24 +334,24 @@
       <workItem from="1580989678062" duration="7072000" />
       <workItem from="1581505878398" duration="100007000" />
       <workItem from="1585216733458" duration="27883000" />
-      <workItem from="1585569573709" duration="106499000" />
+      <workItem from="1585569573709" duration="113199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256400000" />
+    <option name="totallyTimeSpent" value="263100000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-232" y="-1057" width="1860" height="1057" extended-state="0" />
+    <frame x="-239" y="-1057" width="1860" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.62118495" weight="0.16452074" />
       <window_info active="true" id="Structure" order="1" sideWeight="0.37881508" side_tool="true" visible="true" weight="0.12651265" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" visible="true" weight="0.24455959" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" weight="0.39231825" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" weight="0.2884882" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49780703" weight="0.24455959" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" visible="true" weight="0.36062175" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8190789" weight="0.36891192" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -360,12 +359,12 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.34375" side_tool="true" weight="0.3220339" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733758" weight="0.22485876" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733758" weight="0.13160622" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49928468" weight="0.32655367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.20242023" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3778878" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -395,56 +394,72 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/evaluation/analysis.py</url>
+          <line>512</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/evaluation/analysis.py</url>
+          <line>163</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/URL_fetcher$domain_analysis.coverage" NAME="domain_analysis Coverage Results" MODIFIED="1586597939777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
-    <SUITE FILE_PATH="coverage/URL_fetcher$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1586621943018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
+    <SUITE FILE_PATH="coverage/URL_fetcher$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1586775171159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
     <SUITE FILE_PATH="coverage/URL_fetcher$url_fetcher.coverage" NAME="url_fetcher Coverage Results" MODIFIED="1586347868923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/URL_fetcher$news_scan_feeder.coverage" NAME="news_scan_feeder Coverage Results" MODIFIED="1586348598831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>rank_df[feature][rank_df[feature] == group].empty</expression-string>
+        <expression-string>df</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>rank_df[feature][rank_df[feature] == group]</expression-string>
+        <expression-string>df['total']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>rank_df[feature][rank_df[feature] == group].value_counts() is None</expression-string>
+        <expression-string>df['total'].iloc[index]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>rank_df[feature][rank_df[feature] == group].value_counts()</expression-string>
+        <expression-string>df['rank']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>group_frequency/number_queries</expression-string>
+        <expression-string>df[col]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>group_frequency</expression-string>
+        <expression-string>df[col].iloc['rank']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>rank_df[feature][rank_df[feature] == group].value_counts().iloc[0]</expression-string>
+        <expression-string>row_total</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>group_frequency.values[0]</expression-string>
+        <expression-string>df.drop(groups, axis=1)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>group_frequency.values</expression-string>
+        <expression-string>groups</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -737,6 +752,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/evaluation/readability_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1712">
@@ -747,17 +769,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/evaluation/analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="147" column="46" selection-start-line="147" selection-start-column="46" selection-end-line="147" selection-end-column="46" />
+        <state relative-caret-position="344">
+          <caret line="466" column="53" selection-start-line="466" selection-start-column="53" selection-end-line="466" selection-end-column="53" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

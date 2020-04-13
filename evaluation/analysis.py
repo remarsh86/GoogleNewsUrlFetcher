@@ -7,7 +7,18 @@ import re
 from scipy.stats import ks_2samp
 
 FEATURE = 'ease_of_reading'
-# TODO: replace string in document with FEATURE
+# FEATURE = 'content_length'
+SMALL_SIZE = 8
+MEDIUM_SIZE = 10
+BIGGER_SIZE = 12
+
+plt.rc('font', size=MEDIUM_SIZE)          # controls default text sizes
+plt.rc('axes', titlesize=MEDIUM_SIZE)     # fontsize of the axes title
+plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
+plt.rc('xtick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
+plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
 
 
 def get_output_bias(topic_df, features, topic):
@@ -87,7 +98,69 @@ def get_output_averages(topic_dataframe, feature, df):
     return df
 
 
+def get_distribution_df(feature, results, title):
+    """
+    This method is used to get data relevant for statistical parity statistics!
+    Get the total frequency of that group for all queries at rank N divided by the number of topics to get the average
+    number of this group at rank N.
+    Topics refer to the queries
+    :param feature:
+    :param results:
+    :param title:
+    :return:
+    """
+    top_5 = results[['rank', 'topic', feature]][results['rank'] <= 5]
+    top_10 = results[['rank', 'topic', feature]][results['rank'] <= 10]
+    top_20 = results[['rank', 'topic', feature]][results['rank'] <= 20]
+    top_50 = results[['rank', 'topic', feature]][results['rank'] <= 50]
+    top_100 = results[['rank', 'topic', feature]] # all results
+    number_queries = len(results['topic'].value_counts())
+    rank = [5, 10, 20, 50, 100]
+    i = 0
+    # for Dataframe
+    data = []
+    for rank_df in [top_5, top_10, top_20, top_50, top_100]:
+        group_count_at_rank = {'rank': rank[i]} # count occurrences of group at rank N
+        groups = results[feature].unique()
+        cleaned_groups = [x for x in groups if str(x) != 'nan']
+        for group in cleaned_groups:
+            # Example: ease_of_reading has groups 0, 20, 40, ...
+            if rank_df[feature][rank_df[feature] == group].empty is False:
+                group_frequency = rank_df[feature][rank_df[feature] == group].value_counts().iloc[0]
+                if group_frequency != 0:
+                    group_count_at_rank.update({group: round(group_frequency/number_queries, 2)})
+                else:
+                    group_count_at_rank.update({group: group_frequency})
+            else:
+                group_count_at_rank.update({group: 0})
+        # print("for rank ", rank[i], group_count_at_rank)
+        data.append(group_count_at_rank)
+        i = i+1
+
+    # Create dataframe of results
+    df = pd.DataFrame(data)
+    print(df)
+    return df
+
+
+def get_dist_percent_df(df):
+    """
+    Used to plot disparate impact statistics.  Get distributions as percentages to create a percent stacked chart.
+    :param df: output from function get_distribution_df()
+    :return:
+    """
+
+
+
+
 def get_averages_rank_N(data_list, features):
+    """
+    Calculate averages for each INL feature for each Dataframe in data_list
+    :param data_list: Dataframe that contains NewsScan results for two separate groups of data (ex: poli_results and
+    econ_results).
+    :param features: a list of all INL features
+    :return:
+    """
     # For analysis of averages in top N results
     results_econ = pd.DataFrame({}, columns=['topic', 'INL', 'Top 1', 'Top 3', 'Top 5', 'Top 10', 'Top 20', 'Top 50',
                                              'Input'])
@@ -130,29 +203,16 @@ def remove_queries(res):
 
 
 def test_distribution_similarity(feature, g1, g2):
+    """
+    Analyze two sample data distributions of a feature. Uses the Kolmogorov–Smirnov test.
+    :param feature:
+    :param g1: Data (Dataframe) belonging to group 1
+    :param g2: Data (Dataframe) belonging to group 2
+    :return:
+    """
     series1 = g1.groupby(feature).count()['topic']
     series2 = g2.groupby(feature).count()['topic']
     print(ks_2samp(series1, series2))
-
-
-def get_feature_distribution(feature, res, title):
-    """
-    Plot the distribution of INL scores
-    :param feature: an INL like 'ease_of_reading'
-    :param res: Dataframe of results
-    :return:
-    """
-    label = feature.replace('_', ' ').title().replace('Of', 'of')
-    df = res.groupby(feature).count()[['topic']]
-    print(df)
-    df.rename(columns={'topic': 'Search Results'}, inplace=True)
-    df.rename(index={20.0: str(20.0)+' (C2)', 40.0: str(40.0)+' (C1)', 60.0: str(60.0)+' (B2)', 80.0: str(80.0)+' (B1)',
-                     100.0: str(100.0)+' (A2)' }, inplace=True)
-    df.plot(kind='bar')
-    plt.ylabel('Frequency of Occurrences')
-    plt.xlabel(label)
-    plt.title(f'{label} Distribution for {title}')
-    plt.show()
 
 
 def create_scatter_plots(topic_data, features):
@@ -164,8 +224,6 @@ def create_scatter_plots(topic_data, features):
     :return: None
     """
     # CURRENTLY NOT BEING USED
-    # todo: Add regression line
-    # todo: Add title for topic_data
     for feature in features:
         ax = topic_data.plot(x=feature, y='rank', kind='scatter')
         ax.set_xlim(1, 101)
@@ -174,7 +232,7 @@ def create_scatter_plots(topic_data, features):
         plt.show()
 
 
-def create_feature_scatterplot(feature, results):
+def create_feature_scatterplot(feature, results, title):
     """
     Plots results for the search results of one INL Label for all queries.
 
@@ -182,24 +240,23 @@ def create_feature_scatterplot(feature, results):
     :param results:
     :return: None
     """
-    label = reformat_topics(feature.replace('_', ' '))
+
+    label = feature.replace('_', ' ').title().replace('Of', 'of')
     x = results['rank']
     y = results[feature]
     plt.scatter(x, y, s=70, alpha=0.03)
-    plt.ylim((1, 101))
-    plt.xlim((1, 101))
-    plt.title(f'{label} Results for all Queries')
+    if feature is 'content_length':
+        plt.ylim((1, 50000))
+        plt.xlim((1, 101))
+    else:
+        plt.ylim((1, 101))
+        plt.xlim((1, 101))
+    if feature is 'ease_of_reading':
+        plt.yticks([0, 20.0, 40.0, 60.0, 80.0, 100.0], ['', '20 (C2)', '40 (C1)', '60 (B2)', '80 (B1)', '100 (A2)'])
+    plt.title(f'{label} Results {title}')
     plt.ylabel(label)
     plt.xlabel('Rank')
     plt.show()
-
-    # results10 = results[:][results['rank'] <= 10]
-    # x = results10['rank']
-    # y = results10[feature]
-    # plt.scatter(x, y, s=70, alpha=0.03)
-    # plt.ylim((1, 101))
-    # plt.xlim((1, 10))
-    # plt.show()
 
 
 def create_feature_density_plot(feature, results):
@@ -215,8 +272,8 @@ def create_feature_density_plot(feature, results):
         ax = topic_subset.plot(y=feature, x='rank', kind='line')
         ax.set_xlim(1, 101)
         ax.set_ylim(1, 101)
-        plt.title(f'Ease of Reading Results for {topic}')
-        plt.ylabel('Ease of Reading')
+        plt.title(f'{feature} Results for {topic}')
+        plt.ylabel(f'{feature}')
         plt.xlabel('Rank')
         plt.show()
 
@@ -233,12 +290,17 @@ def plot_top1_input(df, feature, title):
 
     data_by_feature = df[:][df['INL'] == feature]
 
+    label = feature.replace('_', ' ').title().replace('Of', 'of')
     data_by_feature.index = data_by_feature['topic']
     data_by_feature.plot.barh(y=['Top 1','Input Bias'])
-    plt.title(f'Ease of Reading Search Results {title}')
-    plt.xlabel('Ease of Reading')
+    # l = len(data_by_feature.index)
+    # plt.rcParams["figure.figsize"] = [12.0, l]
+    plt.title(f'{label} Search Results {title}', loc='left')
+    plt.xlabel(f'{label}')
     plt.ylabel('Query')
-    plt.xticks([0, 20, 40, 60, 80, 100])
+
+    if feature is 'ease_of_reading':
+        plt.xticks([0, 20, 40, 60, 80, 100])
     plt.legend(loc='upper center', bbox_to_anchor=(1.0, 1.0), shadow=True, ncol=1)
     plt.show()
 
@@ -247,10 +309,13 @@ def plot_topN_averages(df, feature, title):
     """
     The feature is one of the INL features.  This function plots INL score of top N search results for a feature.
     :param df:
-    :param feature:
+    :param feature: an INL
     :return:
     """
     data_by_feature = df[:][df['INL'] == feature]
+
+    label = feature.replace('_', ' ').title().replace('Of', 'of')
+    data_by_feature.reset_index(drop=True, inplace=True)
 
     data = [{'INL': data_by_feature['INL'][0],
              'Top 1': data_by_feature['Top 1'].mean(skipna=True),
@@ -264,8 +329,11 @@ def plot_topN_averages(df, feature, title):
 
     ax = avg_df.plot(x='INL', y=['Top 1', 'Top 3', 'Top 5', 'Top 10', 'Top 20', 'Top 50', 'Input Bias'], kind='bar')
     plt.xticks([])
+    if feature is 'ease_of_reading':
+        plt.yticks([0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0, 100.0],
+                   ['', '10', '20 (C2)', '30', '40 (C1)', '50', '60 (B2)', '70', '80 (B1)', '90','100 (A2)'])
     plt.title(f'Average search results {title}')
-    plt.ylabel('Ease of Reading')
+    plt.ylabel(f'{label}')
     plt.xlabel('Top N Results')
     plt.show()
 
@@ -278,10 +346,12 @@ def plot_output_bias_by_query(df, feature, title):
     """
     data_by_feature = df[:][df['INL'] == feature]
 
+    label = feature.replace('_', ' ').title().replace('Of', 'of')
+
     data_by_feature.index = data_by_feature['topic']
     data_by_feature.plot.barh(y=['OB Rank 10', 'OB Rank 20', 'Input Bias'])
-    plt.title(f'Ease of Reading output bias for rank N for {title}')
-    plt.xlabel('Ease of Reading')
+    plt.title(f'{label} output bias for rank N for {title}')
+    plt.xlabel(f'{label}')
     plt.ylabel('Query')
     plt.legend(loc='upper center', bbox_to_anchor=(1.0, 0.5), shadow=True, ncol=1)
     plt.show()
@@ -295,6 +365,7 @@ def plot_average_output_bias(df, feature, title):
     """
     data_by_feature = df[:][df['INL'] == feature]
     data_by_feature.reset_index(drop=True, inplace=True)
+    label = feature.replace('_', ' ').title().replace('Of', 'of')
 
     data = [{'INL': data_by_feature['INL'][0],
              'OB Rank 3': data_by_feature['OB Rank 3'].mean(skipna=True),
@@ -308,18 +379,21 @@ def plot_average_output_bias(df, feature, title):
     ax = avg_df.plot(x='INL', y=['OB Rank 3', 'OB Rank 5', 'OB Rank 10', 'OB Rank 20', 'OB Rank 50', 'Input Bias'], kind='bar')
     plt.xticks([])
     plt.title(f'Average Output Bias Results {title}')
-    plt.ylabel('Ease of Reading')
+    plt.ylabel(f'{label}')
+    if feature is 'ease_of_reading':
+        plt.yticks([0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0, 100.0],
+                   ['', '10', '20 (C2)', '30', '40 (C1)', '50', '60 (B2)', '70', '80 (B1)', '90','100 (A2)'])
     plt.xlabel('Output Bias for Rank N')
     plt.show()
 
-    plot_ranking_bias(avg_df, title)
+    plot_ranking_bias(avg_df, label, title)
 
 
-def plot_ranking_bias(df, title):
+def plot_ranking_bias(df, label, title):
     """
     Calculate ranking bias: RB(q, r) =OB(q, r)−IB(q) for each rank (3, 5, 10, 20, 50).
-    :param df:
-    :param feature:
+    :param df: Dataframe of data...
+    :param label: The name of the formatted INL for use in plot title.
     :return:
     """
     df['INL'][0] = df['INL'][0].capitalize()
@@ -330,14 +404,39 @@ def plot_ranking_bias(df, title):
     df['Ranking Bias R50'] = df['OB Rank 50'] - df['Input Bias']
     ax = df.plot(x='INL', y=['Ranking Bias R3', 'Ranking Bias R5', 'Ranking Bias R10', 'Ranking Bias R20', 'Ranking Bias R50'],
                      kind='bar')
-    feature = df['INL'][0]
+
     plt.xticks([])
-    # plt.title(f'{feature} Ranking Bias Results {title}')
-    # plt.ylabel(f'{feature} Ranking Bias')
-    plt.title(f'Ease of Reading Ranking Bias Results {title}')
-    plt.ylabel(f'Ease of Reading Ranking Bias')
+    plt.title(f'{label} Ranking Bias Results {title}')
+    plt.ylabel(f'{label} Ranking Bias')
     plt.xlabel('Ranking Bias for Rank N')
     plt.show()
+
+def plot_statistical_parity(feature, df, title):
+    """
+    Plot statistical parity of groups at rank N.
+
+    :param df: Dataframe of statistical parity results.  One column in 'rank' and the others are the
+    frequency count/number of queries for each group.
+    :return: None
+    """
+    label = feature.replace('_', ' ').title().replace('Of', 'of')
+    df.set_index('rank', inplace=True)
+    df.loc[:, df.columns].plot.bar(stacked=True, figsize=(10, 7))
+    plt.title(f'Statistical Partiy at Rank N for {label} {title}')
+    plt.ylabel(f'Number of Documents')
+    plt.xlabel('Rank N')
+    plt.show()
+
+
+# def plot_disparate_impact(feature, df, title):
+#     """
+#
+#     :param feature:
+#     :param df:
+#     :param title:
+#     :return:
+#     """
+#
 
 
 def reformat_topics(str):
@@ -359,24 +458,32 @@ if __name__ == '__main__':
 
     data_list = [data_poli, data_econ]
     features = ['ease_of_reading', 'sentence_level_sentiment', 'sentence_level_objectivity', 'bias', 'credibility',
-                'trust_metric', 'google_page_rank', 'alexa_reach_rank']
+                'trust_metric', 'google_page_rank', 'alexa_reach_rank', 'content_length']
 
-    results_poli, results_econ, output_bias_poli, output_bias_econ = get_averages_rank_N(data_list, features)
-
+    # results_poli, results_econ, output_bias_poli, output_bias_econ = get_averages_rank_N(data_list, features)
+    #
     # # Analyze output bias
-    plot_output_bias_by_query(output_bias_poli, FEATURE, "for Political Queries")
-    plot_output_bias_by_query(output_bias_econ, FEATURE, "for Economic Queries")
-    output_bias = output_bias_econ.append(output_bias_poli, ignore_index=True)
-    plot_average_output_bias(output_bias, FEATURE, "for all Queries")
-
-    # Analyze average results
-    plot_top1_input(results_poli, FEATURE, "for Political Queries")
-    plot_top1_input(results_econ, FEATURE, "for Economic Queries")
-    average_results = results_econ.append(results_poli, ignore_index=True)
-    plot_topN_averages(average_results, FEATURE, 'for all Queries')
+    # plot_output_bias_by_query(output_bias_poli, FEATURE, "for Political Queries")
+    # plot_output_bias_by_query(output_bias_econ, FEATURE, "for Economic Queries")
+    # output_bias = output_bias_econ.append(output_bias_poli, ignore_index=True)
+    # plot_average_output_bias(output_bias, FEATURE, "for all Queries")
+    #
+    # # Analyze average results
+    # plot_top1_input(results_poli, FEATURE, "for Political Queries")
+    # plot_top1_input(results_econ, FEATURE, "for Economic Queries")
+    # average_results = results_econ.append(results_poli, ignore_index=True)
+    # plot_topN_averages(average_results, FEATURE, 'for all Queries')
 
     # Create Scatterplot for each feature containing all results
     results = data_poli.append(data_econ, ignore_index=True)
-    for feature in features:
-        create_feature_scatterplot(feature, results)
 
+    # Get statistical parity and disparate impact stacked bar charts
+    stat_parity_df = get_distribution_df(FEATURE, results, 'for all Results')
+    disparate_impact_df = get_dist_percent_df(stat_parity_df)
+
+    plot_statistical_parity(FEATURE, stat_parity_df, 'for all Results')
+    # plot_disparate_impact(FEATURE, stat_parity_df, 'for all Results')
+
+    # for feature in features:
+    #     create_feature_scatterplot(feature, results, 'for all Results')
+    #

@@ -22,6 +22,26 @@ plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
 plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
 
 
+def get_label_count(topic_df, feature, topic):
+    """
+
+    :param topic_df: Results for this topic from NewsScan
+    :param features: One INL feature: (ex: 'bias_label')
+    :param topic: A query submitted to NewsScan
+    :return:
+    """
+    label_count_df = pd.DataFrame()
+    label_count = {'topic': topic}
+
+    # Get unique values from the column topic_df[feature]
+    for topic in topic_df[FEATURE].unique():
+        # TODO: For each unique label/score, count occurrence in topic_df[FEATURE] and append result to label_count
+        pass
+
+
+    return label_count_df
+
+
 def get_output_bias(topic_df, features, topic):
     """
     Calculate output bias for top 3, 5, 10, 20 , 50 results per topic and return dataframe
@@ -32,8 +52,9 @@ def get_output_bias(topic_df, features, topic):
     (which counts bias score) instead.  Also, bias scores (the mean of the documents to rank i) should not be calculated
     for an i that is not in the ranking.  Example: ranking = [1, 3].  I.e. Document with rank 2 could not be evaluated by
     NewsScan.  So the output bias is (b_1 + mean(b_1, b_2))/2, where b_i is the bias score of the document at rank i.
-    :param df: data of all INL scores
-    :param feature: one INL feature
+    :param topic_df: Dataframe of ranked results for one query received from NewsScan
+    :param features: The list of INL features: ['ease_of_reading, ... , 'bias_label']
+    :param topic: Query submitted to NewsScan (ex: 'RefugeeCrisis')
     :return: dataframe of output_bias_df
     """
 
@@ -211,7 +232,8 @@ def get_dist_percent_df(feature, df_original):
 
 def get_averages_rank_N(data_list, features):
     """
-    Calculate averages for each INL feature for each Dataframe in data_list
+    Calculate averages for each INL feature for each Dataframe in data_list. topic_data is a Dataframe containing
+    results from one query.
     :param data_list: Dataframe that contains NewsScan results for two separate groups of data (ex: poli_results and
     econ_results).
     :param features: a list of all INL features
@@ -222,9 +244,14 @@ def get_averages_rank_N(data_list, features):
                                              'Input'])
     results_poli = pd.DataFrame({}, columns=['topic', 'INL', 'Top 1', 'Top 3', 'Top 5', 'Top 10', 'Top 20', 'Top 50',
                                              'Input'])
+
     # For analysis of output bias
     output_bias_econ = pd.DataFrame()
     output_bias_poli = pd.DataFrame()
+
+    # For analysis of bias_labels
+    label_count_poli = pd.DataFrame()
+    label_count_econ = pd.DataFrame()
 
     # Create Dataframe containing search result averages
     for data in data_list:
@@ -233,6 +260,7 @@ def get_averages_rank_N(data_list, features):
             if data is data_list[0]:
                 output_bias_poli = output_bias_poli.append(get_output_bias(topic_data, features, topic))
                 results_poli = get_output_averages(topic_data, features, results_poli)
+                label_count_poli = label_count_poli.append(get_label_count(topic_data, FEATURE, topic))
             else:
                 output_bias_econ = output_bias_econ.append(get_output_bias(topic_data, features, topic))
                 results_econ = get_output_averages(topic_data, features, results_econ)
@@ -360,6 +388,8 @@ def plot_top1_input(df, feature, title):
 
     if feature is 'ease_of_reading':
         plt.xticks([0, 20, 40, 60, 80, 100])
+    elif feature is 'bias_label':
+        plt.xticks([-2.0, -1.0, 0, 1.0, 2.0], ['Far Left', 'Left', 'Center', 'Right', 'Far Right'])
     plt.legend(loc='upper center', bbox_to_anchor=(1.0, 1.0), shadow=True, ncol=1)
     plt.show()
 
@@ -391,6 +421,8 @@ def plot_topN_averages(df, feature, title):
     if feature is 'ease_of_reading':
         plt.yticks([0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0, 100.0],
                    ['', '10', '20 (C2)', '30', '40 (C1)', '50', '60 (B2)', '70', '80 (B1)', '90','100 (A2)'])
+    # elif feature is 'bias_label':
+    #     plt.yticks([-2.0, -1.0, 0, 1.0, 2.0], ['Far Left', 'Left', 'Center', 'Right', 'Far Right'])
     plt.title(f'Average search results {title}')
     plt.ylabel(f'{label}')
     plt.xlabel('Top N Results')
@@ -442,6 +474,8 @@ def plot_average_output_bias(df, feature, title):
     if feature is 'ease_of_reading':
         plt.yticks([0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0, 100.0],
                    ['', '10', '20 (C2)', '30', '40 (C1)', '50', '60 (B2)', '70', '80 (B1)', '90','100 (A2)'])
+    # elif feature is 'bias_label':
+    #     plt.yticks([-2.0, -1.0, 0, 1.0, 2.0], [ 'Far Left', 'Left', 'Center', 'Right', 'Far Right'])
     plt.xlabel('Output Bias for Rank N')
     plt.show()
 
@@ -527,30 +561,30 @@ if __name__ == '__main__':
 
     data_list = [data_poli, data_econ]
     features = ['ease_of_reading', 'sentence_level_sentiment', 'sentence_level_objectivity', 'bias', 'credibility',
-                'trust_metric', 'google_page_rank', 'alexa_reach_rank', 'content_length']
+                'trust_metric', 'google_page_rank', 'alexa_reach_rank', 'content_length', 'bias_label']
 
-    # results_poli, results_econ, output_bias_poli, output_bias_econ = get_averages_rank_N(data_list, features)
-    #
-    # # Analyze output bias
-    # plot_output_bias_by_query(output_bias_poli, FEATURE, "for Political Queries")
-    # plot_output_bias_by_query(output_bias_econ, FEATURE, "for Economic Queries")
-    # output_bias = output_bias_econ.append(output_bias_poli, ignore_index=True)
-    # plot_average_output_bias(output_bias, FEATURE, "for all Queries")
-    #
-    # # Analyze average results
-    # plot_top1_input(results_poli, FEATURE, "for Political Queries")
-    # plot_top1_input(results_econ, FEATURE, "for Economic Queries")
-    # average_results = results_econ.append(results_poli, ignore_index=True)
-    # plot_topN_averages(average_results, FEATURE, 'for all Queries')
+    results_poli, results_econ, output_bias_poli, output_bias_econ = get_averages_rank_N(data_list, features)
+
+    # Analyze output bias
+    plot_output_bias_by_query(output_bias_poli, FEATURE, "for Political Queries")
+    plot_output_bias_by_query(output_bias_econ, FEATURE, "for Economic Queries")
+    output_bias = output_bias_econ.append(output_bias_poli, ignore_index=True)
+    plot_average_output_bias(output_bias, FEATURE, "for all Queries")
+
+    # Analyze average results
+    plot_top1_input(results_poli, FEATURE, "for Political Queries")
+    plot_top1_input(results_econ, FEATURE, "for Economic Queries")
+    average_results = results_econ.append(results_poli, ignore_index=True)
+    plot_topN_averages(average_results, FEATURE, 'for all Queries')
 
     # Create Scatterplot for each feature containing all results
     results = data_poli.append(data_econ, ignore_index=True)
 
-    # Get statistical parity and disparate impact stacked bar charts
-    stat_parity_df = get_distribution_df(FEATURE, results, 'for all Results')
-    disparate_impact_df = get_dist_percent_df(FEATURE, stat_parity_df)
-
-    plot_statistical_parity(FEATURE, stat_parity_df, 'for all Results')
-    plot_disparate_impact(FEATURE, disparate_impact_df, 'for all Results')
-
-    create_feature_scatterplot(FEATURE, results, 'for all Results')
+    # # Get statistical parity and disparate impact stacked bar charts
+    # stat_parity_df = get_distribution_df(FEATURE, results, 'for all Results')
+    # disparate_impact_df = get_dist_percent_df(FEATURE, stat_parity_df)
+    #
+    # plot_statistical_parity(FEATURE, stat_parity_df, 'for all Results')
+    # plot_disparate_impact(FEATURE, disparate_impact_df, 'for all Results')
+    #
+    # create_feature_scatterplot(FEATURE, results, 'for all Results')

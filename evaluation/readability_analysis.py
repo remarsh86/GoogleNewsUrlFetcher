@@ -16,7 +16,7 @@ def split_on_readability(res):
     :param res:
     :return: return two dataframes which split the data
     """
-    top_1= res[:][res['rank'] == 1]
+    top_1 = res[:][res['rank'] == 1]
     feature_average_df = res.groupby('topic').mean()[['ease_of_reading']]
     group_A = top_1[:][(top_1['ease_of_reading'] <= 60)]
     group_B = top_1[:][top_1['ease_of_reading'] > 60]
@@ -27,7 +27,7 @@ def split_on_readability(res):
     for topic in topics_B:
         # Get average score for topic
         input_bias = feature_average_df[[x.startswith(topic) for x in feature_average_df.index]]['ease_of_reading'][0]
-        top_score = top_1[:][top_1['topic']==topic]['ease_of_reading'].iloc[0]
+        top_score = top_1[:][top_1['topic'] == topic]['ease_of_reading'].iloc[0]
         if input_bias <= top_score:
             clean_topics_B.append(topic)
     return res[res['topic'].isin(topics_A)], res[res['topic'].isin(clean_topics_B)]
@@ -44,8 +44,9 @@ def get_feature_bargraph(feature, res, title):
     df = res.groupby(feature).count()[['topic']]
     print(df)
     df.rename(columns={'topic': 'Search Results'}, inplace=True)
-    df.rename(index={20.0: str(20.0)+' (C2)', 40.0: str(40.0)+' (C1)', 60.0: str(60.0)+' (B2)', 80.0: str(80.0)+' (B1)',
-                     100.0: str(100.0)+' (A2)' }, inplace=True)
+    df.rename(index={20.0: str(20.0) + ' (C2)', 40.0: str(40.0) + ' (C1)', 60.0: str(60.0) + ' (B2)',
+                     80.0: str(80.0) + ' (B1)',
+                     100.0: str(100.0) + ' (A2)'}, inplace=True)
     df.plot(kind='bar')
     plt.ylabel('Frequency of Occurrences')
     plt.xlabel(label)
@@ -71,9 +72,10 @@ def get_histogram(res, feature, title):
     plt.xlabel(f'{label}')
     plt.show()
 
+
 def analyze_document_length(res, group_A, group_B):
     c = res['ease_of_reading'].corr(res['content_length'])
-    print("Does readability correlate with content length? Pearson's Method: ", c )
+    print("Does readability correlate with content length? Pearson's Method: ", c)
 
 
 if __name__ == '__main__':
@@ -96,27 +98,28 @@ if __name__ == '__main__':
     analysis.create_feature_scatterplot('ease_of_reading', group_A, 'for Group A')
     analysis.create_feature_scatterplot('ease_of_reading', group_B, 'for Group B')
 
-    # # Analyze document length
-    # get_histogram(group_A, FEATURE, 'for Group A')
-    # get_histogram(group_B, FEATURE, 'for Group B')
+    # Analyze document length
+    get_histogram(group_A, FEATURE, 'for Group A')
+    get_histogram(group_B, FEATURE, 'for Group B')
 
     # Get distribution of ease of reading groups
-    # get_feature_bargraph('ease_of_reading', group_A, "Group A")
-    # get_feature_bargraph('ease_of_reading', group_B, "Group B")
-    # analysis.test_distribution_similarity('ease_of_reading', group_A, group_B)
+    get_feature_bargraph('ease_of_reading', group_A, "Group A")
+    get_feature_bargraph('ease_of_reading', group_B, "Group B")
+    analysis.test_distribution_similarity('ease_of_reading', group_A, group_B)
 
-    # # Create scatterplot of INL results
-    # analysis.create_feature_scatterplot(FEATURE, group_A, "Group A")
-    # analysis.create_feature_scatterplot(FEATURE, group_B, "Group B")
+    # Create scatterplot of INL results
+    analysis.create_feature_scatterplot(FEATURE, group_A, "Group A")
+    analysis.create_feature_scatterplot(FEATURE, group_B, "Group B")
 
     split_data_list = [group_A, group_B]
-    results_A, results_B, output_bias_A, output_bias_B = analysis.get_averages_rank_N(split_data_list, features)
+    results_A, results_B, output_bias_A, output_bias_B, label_count_A, label_count_B = analysis.get_averages_rank_N(
+        split_data_list, features)
 
-    # # Analyze output bias
-    # analysis.plot_output_bias_by_query(output_bias_A, 'ease_of_reading', 'for Group A')
-    # analysis.plot_average_output_bias(output_bias_A, 'ease_of_reading', ' for Group A')
-    # analysis.plot_output_bias_by_query(output_bias_B, 'ease_of_reading', 'for Group B')
-    # analysis.plot_average_output_bias(output_bias_B, 'ease_of_reading', ' for Group B')
+    # Analyze output bias
+    analysis.plot_output_bias_by_query(output_bias_A, 'ease_of_reading', 'for Group A')
+    analysis.plot_average_output_bias(output_bias_A, 'ease_of_reading', ' for Group A')
+    analysis.plot_output_bias_by_query(output_bias_B, 'ease_of_reading', 'for Group B')
+    analysis.plot_average_output_bias(output_bias_B, 'ease_of_reading', ' for Group B')
 
     # # Analyze average results
     analysis.plot_top1_input(results_A, FEATURE, 'for Group A')
@@ -128,5 +131,3 @@ if __name__ == '__main__':
     analysis.plot_topN_averages(results_A, 'content_length', 'for Group A')
     analysis.plot_top1_input(results_B, 'content_length', 'for Group B')
     analysis.plot_topN_averages(results_B, 'content_length', 'for Group B')
-
-

@@ -39,13 +39,13 @@ def compare_domains_bias_labels(results, label1, label2):
 
     label1_domains = label1_data['domain'].unique()
     label2_domains = label2_data['domain'].unique()
-    print(label1_domains)
-    print(label2_domains)
+    print(len(label1_data['domain']), "Unique: ", len(label1_domains))
+    print(len(label2_data['domain']), "Unique: ", len(label2_domains))
 
     unique_label1_domains = list(set(label1_domains) - set(label2_domains))
-    unique_label2_domains = list(set(label2_domains)-set(label2_domains))
-    print(unique_label1_domains)
-    print(unique_label2_domains)
+    unique_label2_domains = list(set(label2_domains) - set(label1_domains))
+    print("Left domains ", len(unique_label1_domains),  unique_label1_domains)
+    print("Far Right domains ", len(unique_label2_domains), unique_label2_domains)
 
 
 
@@ -64,6 +64,7 @@ if __name__ == '__main__':
 
     # Create Scatterplot for each feature containing all results
     results = data_poli.append(data_econ, ignore_index=True)
+    print("Number of unique domains and article count: " , results['domain'].value_counts())
 
     # Begin analysis of individual queries
     print('Refugee Crisis')
@@ -111,4 +112,4 @@ if __name__ == '__main__':
 
     # Study domains related to Refugee Crisis and Medicare for All
     # compare_domains(results)
-    compare_domains_bias_labels(results, 'Left', 'Far Right')
+    compare_domains_bias_labels(results, -1, 2)

@@ -239,6 +239,9 @@ def get_averages_rank_N(data_list, features):
     """
     Calculate averages for each INL feature for each Dataframe in data_list. topic_data is a Dataframe containing
     results from one query.
+    label_count_poli, label_count_econ refer to the discrete values/labels for this feature. Ex: readability
+    have five features: A2, B1, .., C2.  Bias_labels have five features: Far Left, Left, ... , Far Right
+
     :param data_list: Dataframe that contains NewsScan results for two separate groups of data (ex: poli_results and
     econ_results).
     :param features: a list of all INL features
@@ -279,7 +282,7 @@ def get_averages_rank_N(data_list, features):
     label_count_econ['topic'] = label_count_econ['topic'].apply(reformat_topics)
     label_count_econ.reset_index(drop=True, inplace=True)
     label_count_poli.reset_index(drop=True, inplace=True)
-    # return results_poli, results_econ, output_bias_poli, output_bias_econ
+
     return results_poli, results_econ, output_bias_poli, output_bias_econ, label_count_poli, label_count_econ
 
 
@@ -587,9 +590,7 @@ if __name__ == '__main__':
     results_poli, results_econ, output_bias_poli, output_bias_econ, label_count_poli, label_count_econ = get_averages_rank_N(
         data_list, features)
 
-    # Analyze feature label occurrences and save to excel
-    print(label_count_poli)
-    print(label_count_econ)
+    # Analyze feature label occurrences for each query and save to excel
     label_count_df = label_count_poli.append(label_count_econ, ignore_index=True)
     print_to_excel(label_count_df, 'Query_bias_label_count')
 
@@ -604,15 +605,15 @@ if __name__ == '__main__':
     plot_top1_input(results_econ, FEATURE, "for Economic Queries")
     average_results = results_econ.append(results_poli, ignore_index=True)
     plot_topN_averages(average_results, FEATURE, 'for all Queries')
-    #
-    # # Create Scatterplot for each feature containing all results
-    # results = data_poli.append(data_econ, ignore_index=True)
 
-    # # Get statistical parity and disparate impact stacked bar charts
-    # stat_parity_df = get_distribution_df(FEATURE, results, 'for all Results')
-    # disparate_impact_df = get_dist_percent_df(FEATURE, stat_parity_df)
-    #
-    # plot_statistical_parity(FEATURE, stat_parity_df, 'for all Results')
-    # plot_disparate_impact(FEATURE, disparate_impact_df, 'for all Results')
-    #
-    # create_feature_scatterplot(FEATURE, results, 'for all Results')
+    # Create Scatterplot for each feature containing all results
+    results = data_poli.append(data_econ, ignore_index=True)
+
+    # Get statistical parity and disparate impact stacked bar charts
+    stat_parity_df = get_distribution_df(FEATURE, results, 'for all Results')
+    disparate_impact_df = get_dist_percent_df(FEATURE, stat_parity_df)
+    plot_statistical_parity(FEATURE, stat_parity_df, 'for all Results')
+    plot_disparate_impact(FEATURE, disparate_impact_df, 'for all Results')
+
+    # Get scatterplot for FEATURE
+    create_feature_scatterplot(FEATURE, results, 'for all Results')

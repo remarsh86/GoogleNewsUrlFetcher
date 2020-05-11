@@ -70,38 +70,37 @@ if __name__ == '__main__':
     features = ['ease_of_reading', 'sentence_level_sentiment', 'sentence_level_objectivity', 'bias', 'credibility',
                 'trust_metric', 'google_page_rank', 'alexa_reach_rank', 'content_length', 'bias_label']
 
-    # # Create Scatterplot for each feature containing all results
-    # results = data_poli.append(data_econ, ignore_index=True)
-    # print("Number of unique domains and article count: ", results['domain'].value_counts())
-    #
-    # # Begin analysis of individual queries
-    # print('Refugee Crisis')
-    # refugee_crisis_results = get_topic_results('RefugeeCrisis', results)
-    # # Get statistical parity and disparate impact stacked bar charts
-    # stat_parity_df_1 = analysis.get_distribution_df(FEATURE, refugee_crisis_results, 'for Topic Refugee Crisis')
-    # disparate_impact_df_1 = analysis.get_dist_percent_df(FEATURE, stat_parity_df_1)
-    # analysis.print_to_excel(stat_parity_df_1, 'RefugeeCrisis')
-    # analysis.plot_statistical_parity(FEATURE, stat_parity_df_1, 'for Topic Refugee Crisis')
-    # analysis.plot_disparate_impact(FEATURE, disparate_impact_df_1, ' (Topic Refugee Crisis)')
-    #
-    # print()
-    # print('Medicare For All: ')
-    # medicare_results = get_topic_results('MedicareForAll', results)
-    # # Get statistical parity and disparate impact stacked bar charts
-    # stat_parity_df = analysis.get_distribution_df(FEATURE, medicare_results, 'for Topic Medicare for All')
-    # disparate_impact_df = analysis.get_dist_percent_df(FEATURE, stat_parity_df)
-    # analysis.print_to_excel(stat_parity_df, 'MedicareForAll')
-    # analysis.plot_statistical_parity(FEATURE, stat_parity_df, 'for Topic Medicare for All')
-    # analysis.plot_disparate_impact(FEATURE, disparate_impact_df, ' (Topic Medicare for All)')
-    #
-    # # Study domains with Left and Far Right label
-    # compare_domains_bias_labels(results, -1, 2)
+    # Create Scatterplot for each feature containing all results
+    results = data_poli.append(data_econ, ignore_index=True)
+    print("Number of unique domains and article count: ", results['domain'].value_counts())
+
+    # Begin analysis of individual queries
+    print('Refugee Crisis')
+    refugee_crisis_results = get_topic_results('RefugeeCrisis', results)
+    # Get statistical parity and disparate impact stacked bar charts
+    stat_parity_df_1 = analysis.get_distribution_df(FEATURE, refugee_crisis_results, 'for Topic Refugee Crisis')
+    disparate_impact_df_1 = analysis.get_dist_percent_df(FEATURE, stat_parity_df_1)
+    analysis.print_to_excel(stat_parity_df_1, 'RefugeeCrisis')
+    analysis.plot_statistical_parity(FEATURE, stat_parity_df_1, 'for Topic Refugee Crisis')
+    analysis.plot_disparate_impact(FEATURE, disparate_impact_df_1, ' (Topic Refugee Crisis)')
+
+    print()
+    print('Medicare For All: ')
+    medicare_results = get_topic_results('MedicareForAll', results)
+    # Get statistical parity and disparate impact stacked bar charts
+    stat_parity_df = analysis.get_distribution_df(FEATURE, medicare_results, 'for Topic Medicare for All')
+    disparate_impact_df = analysis.get_dist_percent_df(FEATURE, stat_parity_df)
+    analysis.print_to_excel(stat_parity_df, 'MedicareForAll')
+    analysis.plot_statistical_parity(FEATURE, stat_parity_df, 'for Topic Medicare for All')
+    analysis.plot_disparate_impact(FEATURE, disparate_impact_df, ' (Topic Medicare for All)')
+
+    # Study domains with Left and Far Right label
+    compare_domains_bias_labels(results, -1, 2)
 
     # Examine difference in political and economic queries
     data_list = [data_poli, data_econ]
     results_poli, results_econ, output_bias_poli, output_bias_econ, label_count_poli, label_count_econ = \
         analysis.get_averages_rank_N(data_list, features)
-
     analysis.plot_topN_averages(results_poli, FEATURE, 'for Political Queries')
     analysis.plot_topN_averages(results_econ, FEATURE, 'for Economic Queries')
 
